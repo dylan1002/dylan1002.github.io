@@ -68,7 +68,6 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repository: https://github.com/dylan995/dengindex.github.io.git
-  branch: master
-  plugins: -hexo-generator-feed
+  type: github
+  repository: git@github.com:dylan1002/dylan1002.github.io.git
+  branch:master
