@@ -206,6 +206,335 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/24/小试牛刀 -- 科比相册/" itemprop="url">
+                  小试牛刀 -- 科比相册
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-24T12:21:37+08:00" content="2016-03-24">
+              2016-03-24
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="小试牛刀-–-科比相册"><a href="#小试牛刀-–-科比相册" class="headerlink" title="小试牛刀 – 科比相册"></a>小试牛刀 – 科比相册</h1><p>标签（空格分隔）： 未分类</p>
+<hr>
+<p>学了DOM怎能不为科比建相册，乱搞= = </p>
+<p>#地址：<a href="kobe.mimacuowu.cn">kobe.mimacuowu.cn</a><br>JS中的函数（DOM脚本）</p>
+<ol>
+<li>addLoadEvent()<br><strong>解决了window.onload只能绑定一个函数的缺点</strong><br><code>function addLoadEvent(func) {
+var oldonload = window.onload;
+if(typeof window.onload != &#39;function&#39;)
+{
+window.onload = func;
+}else
+ {
+window.onload = function()
+  {
+oldonload();
+func();
+   }
+  }
+}</code><br>调用方法addLoadEvent(func);这里的func 就是需要调用的函数，<br>function addLoadEvent(func){创建了一个函数名为addLoadEvent,参数为func的函数，这里把我们需要加载的函数作为参数在这个addLoadEvent函数中进行调用。}<br>var oldonload=window.onload 定义一个变量,把window.onload赋给oldonload，如果开始的时候window.onload调用了一个函数A()，那么在这里oldonload就等于A();<br>//typeof 判断一个变量的类型，如果window.onload调用的是一个函数，那么这个if条件语句的值就是true那么就执行window.onload=func;(此时的参数func就是我们需要调用的函数)<br>如果条件语句的结果是false，那么就调用一个匿名的函数window.onload=function(){oldonload();func();}<br>这个匿名的函数 会先执行oldonload()函数,然后执行func（）这个函数。<br>也就是说，会先调用 正在执行的那个函数，然后在调用我们需要调用的函数A().</li>
+</ol>
+<ol>
+<li>insertAfter()<br><code>function insertAfter(newElement, targetElement){
+var parent = targetElement.parentNode;
+if (parent.lastChild == targetElement) {
+// 如果最后的节点是目标元素，则直接添加。因为默认是最后
+parent.appendChild(newElement);
+}
+else {
+parent.insertBefore(newElement, targetElement.nextSibling);
+//如果不是，则插入在目标元素的下一个兄弟节点 的前面。也就是目标元素的后面
+}
+}</code><br>##用到的DOM方法集<br>1.document.getElementById(id)<br>getElementById() 方法可返回对拥有指定 ID 的第一个对象的引用。<br>2.document.getElementsByTagName(tagname)<br>getElementsByTagName() 方法可返回带有指定标签名的对象的集合。<br>3.createElement() 方法<br>可创建元素节点。<br>4.createTextNode()<br>可创建文本节点<br>5.element.setAttribute(attributename,attributevalue)<br>添加指定的属性，并为其赋指定的值。如果这个指定的属性已存在，则仅设置/更改值。</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/24/3.22笔记/" itemprop="url">
+                  3.22笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-24T12:21:37+08:00" content="2016-03-24">
+              2016-03-24
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="3-22笔记"><a href="#3-22笔记" class="headerlink" title="3.22笔记"></a>3.22笔记</h1><p>标签（空格分隔）： 未分类</p>
+<hr>
+<p>##1. 遇到了alert（）无效的问题（弱鸡）<br>直接输入alert()无效<br>必须是<br><code>&lt;script&gt;
+alert (description.nodeValue);
+&lt;/script&gt;</code></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/23/3.21 CSS学习笔记（1）/" itemprop="url">
+                  3.21 CSS学习笔记（1）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-23T16:21:34+08:00" content="2016-03-23">
+              2016-03-23
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="基础知识点（粗劣了解）"><a href="#基础知识点（粗劣了解）" class="headerlink" title="基础知识点（粗劣了解）"></a>基础知识点（粗劣了解）</h1><p>标签（空格分隔）： 未分类</p>
+<hr>
+<h1 id="1-css"><a href="#1-css" class="headerlink" title="1. css"></a>1. css</h1><p>###CSS的优点<br>1.实现精确控制页面每一个元素的字体，排列方式，大小，颜色等。<br>2.简化网页格式代码。<br>3.外部链接样式实现同时定义多个页面。</p>
+<p>###选择器</p>
+<ol>
+<li><p>基础选择器<br>| 选择器     | 含义  |<br>| ——–   | —–:  |<br>| *    | 通用元素选择器，匹配任何元素 |<br>| E      |  标签选择器，匹配所有使用E标签的元素 |<br>| .info和E.info       |    \$1  class选择器，匹配所有class属性中包含info的元素</p>
+</li>
+<li></li>
+<li>列表项</li>
+<li><h3 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h3>又称为框模型，从内到外分别是内容，内边距，边框，外边距<br>引用W3School的Box Model 图解:<br><img src="http://static.oschina.net/uploads/img/201503/10153449_0pQu.gif" alt="此处输入图片的描述"><br>说明：</li>
+</ol>
+<p>　　1.和第一幅图一样，在上图中，元素框的最内部分是实际的内容（element）；直接包围内容的是内边距（padding），内边距呈现了元 素的背景（background）；内边距的边缘是边框（border）；边框以外是外边距（margin），外边距默认是透明的，因此不会遮挡其后的任 何元素（其实元素的margin就是其所在父元素的padding）。元素的背景应用于由内容和内边距、边框组成的区域。</p>
+<p>　　2.内边距、边框和外边距都是可选的，默认值是零。但是，许多元素将由用户代理样式表设置外边距和内边距。可以通过将元素的 margin 和 padding 设置为零来覆盖这些浏览器样式。这可以分别进行，也可以使用通用选择器（<em>）对所有元素进行设置：<br>`　　/</em> 设置所有元素的外边距和内边矩为0/<br>{<br>  margin: 0;<br>  padding: 0;<br>  }`</p>
+<ol>
+<li>在 CSS 中，width 和 height 指的是内容区域（element）的宽度和高度。增加内边距、边框和外边距不会影响内容区域的尺寸，但是会增加元素框的总尺寸。假设框的每个边上有 10 个像素的外边距和 5 个像素的内边距。如果希望这个元素框达到 100 个像素，就需要将内容的宽度设置为 70 像素，以下是CSS代码<br><code>#box {
+width: 70px;
+margin: 10px;
+padding: 5px;
+}</code><br><img src="http://static.oschina.net/uploads/img/201503/10153449_7dQk.gif" alt="此处输入图片的描述"><br>##标准盒子 ##<br><img src="http://images.cnblogs.com/cnblogs_com/cchyao/%E6%A0%87%E5%87%86W3C%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E5%92%8CIE%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8BCSS%E5%B8%83%E5%B1%80%E7%BB%8F%E5%85%B8%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/1.JPG" alt="此处输入图片的描述"></li>
+</ol>
+<p>##IE盒子 ##<br><img src="http://images.cnblogs.com/cnblogs_com/cchyao/%E6%A0%87%E5%87%86W3C%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E5%92%8CIE%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8BCSS%E5%B8%83%E5%B1%80%E7%BB%8F%E5%85%B8%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/2.JPG" alt="此处输入图片的描述"><br>　　从上图可以看到 ie 盒子模型的范围也包括 margin、border、padding、content，和标准 w3c 盒子模型不同的是：ie 盒子模型的 content 部分包含了 border 和 pading。</p>
+<p>　 　例：一个盒子的 margin 为 20px，border 为 1px，padding 为 10px，content 的宽为 200px、高为 50px，假如用标准 w3c 盒子模型解释，那么这个盒子需要占据的位置为：宽 20<em>2+1</em>2+10<em>2+200=262px、高 20</em>2+1<em>2</em>10<em>2+50=112px，盒子的实际大小为：宽 1</em>2+10<em>2+200=222px、高 1</em>2+10<em>2+50=72px；假如用ie 盒子模型，那么这个盒子需要占据的位置为：宽 20</em>2+200=240px、高 20*2+50=70px，盒子的实际大小为：宽 200px、高 50px。</p>
+<p>　　那应该选择哪中盒子模型呢？当然是“标准 w3c 盒子模型”了。怎么样才算是选择了“标准 w3c 盒子模型”呢？很简单，就是在网页的顶部加上 doctype 声明。假如不加 doctype 声明，那么各个浏览器会根据自己的行为去理解网页，即 ie 浏览器会采用 ie 盒子模型去解释你的盒子，而 ff 会采用标准 w3c 盒子模型解释你的盒子，所以网页在不同的浏览器中就显示的不一样了。反之，假如加上了 doctype 声明，那么所有浏览器都会采用标准 w3c 盒子模型去解释你的盒子，网页就能在各个浏览器中显示一致了。<br>声明代码：<br><code>&lt;!doctype html public &quot;-//w3c//dtd xhtml 1.0 transitional//en&quot; &quot;http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd&quot;&gt;</code></p>
+<p>###CSS控制文本：<br>文本水平对齐方式： text-align: left/right/center/justify<br>文本缩进：text-indent:value<br>文本字符间距：letter-spacing<br>设置行高：line-height: 100%（一般浏览器为110%~120%）<br>控制文本的大小写：text-transform:capitalize/uppercase/lowercase/</p>
+<p>###CSS控制背景：<br>背景颜色：background-color:<br>设置背景图片：background-image<br><code>body {background-image: url(/i/eg_bg_04.gif);} //为Body元素设置
+p.flower {background-image: url(/i/eg_bg_03.gif); //为段落设置背景
+a.radio {background-image: url(/i/eg_bg_07.gif);} //为段内元素设置背景</code><br>背景重复：background-repeat<br>不重复：no-repeat x轴方向重复 repeat-x y轴方向重复 repeat-y<br>背景固定：background-attachment：fixed</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/21/如何利用github和hexo搭建搭建个人博客/" itemprop="url">
                   如何利用github和hexo搭建搭建个人博客
                 </a>
@@ -341,7 +670,7 @@ Are you sure you want to continue connecting (yes/no)?</code><br>输入yes、然
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
