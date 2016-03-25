@@ -206,6 +206,418 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/25/3.24 HTML5（1）/" itemprop="url">
+                  3.24 HTML5 (1)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-25T19:59:12+08:00" content="2016-03-25">
+              2016-03-25
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> 3.24学习笔记</p>
+<p>标签（空格分隔）： 未分类</p>
+<hr>
+<p>##1.什么是HTML。<br> HTML用于详细规定少量构建网页的元素。<br> 这些元素中大多数都用于描述网页内容，如标题、段落、列表等。</p>
+<p>##2.<br>img元素是显示图片的首选元素<br><img src="" width="" height="" alt=""><br>p元素标记段落，其中em元素表示强调，a元素可以定义链接。</p>
+<p>##3.<br>Html的标记主要包括element、attribute、value</p>
+<p>##4.<br>URL:Uniform Resource Locator<br>基本的URL包含模式、服务器名称、路径和文件名。<br>模式：http超文本传输协议、ftp文件传输协议、https用于安全网页 </p>
+<p><strong>语义化是指用合理HTML标记以及其特有的属性去格式化文档内容。</strong></p>
+<p>##5.什么是HTML5？<br>HTML5的设计目的是为了在移动设备上支持多媒体。超文本标记语言（HTML）的第五次重大修改。主要的目标是将互联网语义化，以便更好地被人类和机器阅读，并同时提供更好地支持各种媒体的嵌入。</p>
+<p>#实体字符<br>在HTML中，某些字符是预留的。在HTML中不能使用小于号（&lt;）和大于号（&gt;），这是因为浏览器会误认为它们是标签。如果希望正确地显示预留字符，必须在 HTML 源代码中使用字符实体（character entities）。<br>常用实体字符：<br>不间断空格：<code>&amp;nbsp;</code><br>（浏览器总是会截短 HTML 页面中的空格。如果您在文本中写 10 个空格，在显示该页面之前，浏览器会删除它们中的 9 个。如需在页面中增加空格的数量，您需要使用<code>&amp;nbsp;</code> 字符实体。）</p>
+<h2>HTML 中有用的字符实体</h2>
+
+<p class="note"><span>注释：</span>实体名称对大小写敏感！</p>
+
+<table class="dataintable"><br>    <tr><br>      <th style="width:20%">显示结果</th><br>      <th style="width:20%">描述</th><br>      <th style="width:30%">实体名称</th><br>      <th style="width:30%">实体编号</th><br>    </tr><br><br>    <tr><br>      <td>&nbsp;</td><br>      <td>空格</td><br>      <td>&amp;nbsp;</td><br>      <td>&amp;#160;</td><br>    </tr><br><br>    <tr><br>      <td>&#60;</td><br>      <td>小于号</td><br>      <td>&amp;lt;</td><br>      <td>&amp;#60;</td><br>    </tr><br><br>    <tr><br>      <td>&gt;</td><br>      <td>大于号</td><br>      <td>&amp;gt;</td><br>      <td>&amp;#62;</td><br>    </tr><br><br>    <tr><br>      <td>&amp;</td><br>      <td>和号</td><br>      <td>&amp;amp;</td><br>      <td>&amp;#38;</td><br>    </tr><br><br>    <tr><br>      <td>&quot;</td><br>      <td>引号</td><br>      <td>&amp;quot;</td><br>      <td>&amp;#34;</td><br>    </tr><br><br>    <tr><br>      <td>‘</td><br>      <td>撇号&nbsp;</td><br>      <td>&amp;apos; (IE不支持)</td><br>      <td>&amp;#39;</td><br>    </tr><br><br>    <tr><br>      <td>￠</td><br>      <td>分</td><br>      <td>&amp;cent;</td><br>      <td>&amp;#162;</td><br>    </tr><br><br>    <tr><br>      <td>&pound;</td><br>      <td>镑</td><br>      <td>&amp;pound;</td><br>      <td>&amp;#163;</td><br>    </tr><br><br>    <tr><br>      <td>&yen;</td><br>      <td>日圆</td><br>      <td>&amp;yen;</td><br>      <td>&amp;#165;</td><br>    </tr><br><br>    <tr><br>      <td>&euro;</td><br>      <td>欧元</td><br>      <td>&amp;euro;</td><br>      <td>&amp;#8364;</td><br>    </tr><br><br>    <tr><br>      <td>§</td><br>      <td>小节</td><br>      <td>&amp;sect;</td><br>      <td>&amp;#167;</td><br>    </tr><br><br>    <tr><br>      <td>&copy;</td><br>      <td>版权</td><br>      <td>&amp;copy;</td><br>      <td>&amp;#169;</td><br>    </tr><br><br>    <tr><br>      <td>&#174;</td><br>      <td>注册商标</td><br>      <td>&amp;reg;</td><br>      <td>&amp;#174;</td><br>    </tr><br><br>    <tr><br>      <td>&trade;</td><br>      <td>商标</td><br>      <td>&amp;trade;</td><br>      <td>&amp;#8482;</td><br>    </tr><br><br>    <tr><br>      <td>×</td><br>      <td>乘号</td><br>      <td>&amp;times;</td><br>      <td>&amp;#215;</td><br>    </tr><br><br>    <tr><br>      <td>÷</td><br>      <td>除号</td><br>      <td>&amp;divide;</td><br>      <td>&amp;#247;</td><br>    </tr><br></table>
+
+
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/25/3.25 Javascript基本知识（语法）/" itemprop="url">
+                  3.25 Javascript基本知识
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-25T19:58:51+08:00" content="2016-03-25">
+              2016-03-25
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> 3.25 Javascript基本知识（语法）</p>
+<p>标签（空格分隔）： 未分类</p>
+<hr>
+<p>Js的语法与C语言等有很多相似之处，我只记录有差异的，或者比较容易错的。</p>
+<p>#变量：<br>javascript的变量类型是松散类型的（var）,可以用来保存任意类型的数据。</p>
+<p>#数据类型：<br>javascript的数据类型有<br>ECMAScript中有5种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number和String。还有1种复杂数据类型——Object，其本质是一组 无序 的名值对组成<br>Number类型：<br>ECMAScript能保存的最小数值保存在Number.MIN_VALUE中，最大数值保存在Number.MAX_VALUE中<br>+（-）Infinity表示无穷保存在Number.NEGATIVE_INFINOTY和Number.POSITIVE_INFINITY中。<br>isNaN(a)函数可以确定一个参数a是不是数值，是数值返回false。</p>
+<p>String类型：<br>把一个值转换为字符串的方法1.toString（）；2.</p>
+<p>#操作符：<br>+：如果两个操作数都是字符，则将两个字符串连接起来<br>如果只有一个操作数是字符串，则将另外一个操作数转换成字符串再将他们拼接</p>
+<p>全等（===）：它指在两个操作数在未经转换的情况下就相等的情况 Null===Undefined返回False</p>
+<p>#语句：<br>for…in 语句用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。<br>label语句可以在代码中添加标签，一般配合break、continue使用。。</p>
+<p>with语句将代码的作用域设置到一个特定的对象中。</p>
+<p>#函数：<br>arguements对象：通过访问arguments对象的length属性可以知道有多少个参数传给了函数</p>
+<p>HTML5实践：往Kobe网站中添加音乐<br><code>&lt;audio src=&quot;music/rtn.mp3&quot; loop=&quot;loop&quot; preload=&quot;auto&quot; controls=&quot;controls&quot;&gt;remember the 
+name&lt;/audio&gt;</code></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/25/初识DOM脚本（1）/" itemprop="url">
+                  初识DOM脚本（1）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-25T19:58:35+08:00" content="2016-03-25">
+              2016-03-25
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> 初识DOM脚本（1）</p>
+<p>标签（空格分隔）： 个人博客</p>
+<hr>
+<p>###1.nodeValue 属性设置或返回指定节点的节点值。<br>例子：<br>function myFunction()<br>{<br>var c=document.getElementsByTagName(“BUTTON”)[0];<br>var x=document.getElementById(“demo”);<br>x.innerHTML=c.firstChild.nodeValue;<br>}<br><strong>获得第一个 button 元素的节点值</strong></p>
+<p>###2.动态创建HTML<br>1.document.write()：<br>write() 方法可向文档写入 HTML 表达式或 JavaScript 代码。<br>可列出多个参数(exp1,exp2,exp3,…) ，它们将按顺序被追加到文档中。<br><strong>为了避免使用〈script〉标签，所以避免使用document.write方法</strong><br>2.innerHTML ：<br><code>&lt;div id=&quot;testdiv&quot;&gt;
+&lt;/div&gt;</code><br><code>window.onload = function (){
+   var testdiv = document.getElementById(&quot;testdiv&quot;);
+   testdiv.innerHTML=&quot;&lt;p&gt;I inserted &lt;em&gt;this&lt;/em&gt;content.&lt;/p&gt;&quot;;
+}</code><br>3.DOM提供的方法：<br>creatElement()+appendChild()+createTextNode（）<br>例子：<br><code>window.onload = function(){
+  var para = document.createElement(&quot;p&quot;)
+  var testdiv = document.getElementById(&quot;testdiv&quot;);
+  testdiv.appendChild(para);
+  var txt= document.creatTextNode(&quot;Hello World&quot;);
+  para.appendChild(txt);
+}</code></p>
+<p>###3.根据insertBefore（）编写insertAfter（）<br>insertBefore（）调用<br>parentElement.insertBefore(newElement,targetElement)</p>
+<p><code>function insertAfter (newElement,targetElement){
+ var parent = targetElement.parentNode;
+ if(parent.lastChild == targetElemt){
+   parent.appendChild(newElement);
+ }else{
+  parent.insertBefore(newElement,targetElement.nextSibling);
+ }
+}</code></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/25/3.25 HTML5（2）/" itemprop="url">
+                  3.25 HTML5 (2)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-25T19:58:16+08:00" content="2016-03-25">
+              2016-03-25
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> 3.25 HTML5（2）</p>
+<p>标签（空格分隔）： HTML5</p>
+<hr>
+<p>#基本HTML结构<br>1.创建页眉<code>&lt;header&gt; &lt;/header&gt;</code><br>2.标记导航 <code>&lt;nav&gt;&lt;/nav&gt;</code><br>3.创建文章<code>〈article〉&lt;/article&gt;</code><br><strong>4.artcle和section的区别。<br>article元素可以看成是一种特殊类型的section元素，它比section元素更强调独立性。即section元素强调分段或分块，而article强调独立性。具体来说，如果一块内容相对来说比较独立的、完整的时候，应该使用article元素，但是如果你想将一块内容分成几段的时候，应该使用section元素。另外，在HTML5中，div元素变成了一种容器，当使用CSS样式的时候，可以对这个容器进行一个总体的CSS样式的套用。</strong><br>4.标记侧栏。aside。<br>尽管他是对侧栏内容的标记，但是它本身不影响页面布局。<br>5.创建页脚footer。<br><strong>通用容器<code>&lt;div&gt;</code> 有了通用容器，我们就可以为其添加CSS或JavaScript效果了。</strong></p>
+<p>#为元素指定类别或ID名称。<br>1.唯一标识符的方法 id=“name”<br>2.指定类别的方法class = “name”<br><em>id属性会自动将该元素转化成锚，可以创建指到这里的链接</em></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/24/小试牛刀 -- 科比相册/" itemprop="url">
                   小试牛刀 -- 科比相册
                 </a>
@@ -249,7 +661,8 @@
       
         
           
-            <h1 id="小试牛刀-–-科比相册"><a href="#小试牛刀-–-科比相册" class="headerlink" title="小试牛刀 – 科比相册"></a>小试牛刀 – 科比相册</h1><p>标签（空格分隔）： 未分类</p>
+            <p> 小试牛刀 – 科比相册</p>
+<p>标签（空格分隔）： 未分类</p>
 <hr>
 <p>学了DOM怎能不为科比建相册，乱搞= = </p>
 <p>#地址：<a href="http://kobe.mimacuowu.cn" target="_blank" rel="external">http://kobe.mimacuowu.cn</a> JS中的函数（DOM脚本）</p>
@@ -670,7 +1083,7 @@ Are you sure you want to continue connecting (yes/no)?</code><br>输入yes、然
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
