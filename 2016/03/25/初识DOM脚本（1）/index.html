@@ -60,7 +60,7 @@
 <meta name="description" content="初识DOM脚本（1）
 标签（空格分隔）： 个人博客
 
-###1.nodeValue 属性设置或返回指定节点的节点值。例子：function myFunction(){var c=document.getElementsByTagName(“BUTTON”)[0];var x=document.getElementById(“demo”);x.innerHTML=c.firstChild.node">
+1.nodeValue 属性设置或返回指定节点的节点值。例子：function myFunction(){var c=document.getElementsByTagName(“BUTTON”)[0];var x=document.getElementById(“demo”);x.innerHTML=c.firstChild.nodeVal">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初识DOM脚本（1）">
 <meta property="og:url" content="http://yoursite.com/2016/03/25/初识DOM脚本（1）/index.html">
@@ -68,14 +68,14 @@
 <meta property="og:description" content="初识DOM脚本（1）
 标签（空格分隔）： 个人博客
 
-###1.nodeValue 属性设置或返回指定节点的节点值。例子：function myFunction(){var c=document.getElementsByTagName(“BUTTON”)[0];var x=document.getElementById(“demo”);x.innerHTML=c.firstChild.node">
-<meta property="og:updated_time" content="2016-03-25T12:04:10.185Z">
+1.nodeValue 属性设置或返回指定节点的节点值。例子：function myFunction(){var c=document.getElementsByTagName(“BUTTON”)[0];var x=document.getElementById(“demo”);x.innerHTML=c.firstChild.nodeVal">
+<meta property="og:updated_time" content="2016-03-25T12:15:18.626Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初识DOM脚本（1）">
 <meta name="twitter:description" content="初识DOM脚本（1）
 标签（空格分隔）： 个人博客
 
-###1.nodeValue 属性设置或返回指定节点的节点值。例子：function myFunction(){var c=document.getElementsByTagName(“BUTTON”)[0];var x=document.getElementById(“demo”);x.innerHTML=c.firstChild.node">
+1.nodeValue 属性设置或返回指定节点的节点值。例子：function myFunction(){var c=document.getElementsByTagName(“BUTTON”)[0];var x=document.getElementById(“demo”);x.innerHTML=c.firstChild.nodeVal">
 
 
 
@@ -255,8 +255,8 @@
         <p> 初识DOM脚本（1）</p>
 <p>标签（空格分隔）： 个人博客</p>
 <hr>
-<p>###1.nodeValue 属性设置或返回指定节点的节点值。<br>例子：<br>function myFunction()<br>{<br>var c=document.getElementsByTagName(“BUTTON”)[0];<br>var x=document.getElementById(“demo”);<br>x.innerHTML=c.firstChild.nodeValue;<br>}<br><strong>获得第一个 button 元素的节点值</strong></p>
-<p>###2.动态创建HTML<br>1.document.write()：<br>write() 方法可向文档写入 HTML 表达式或 JavaScript 代码。<br>可列出多个参数(exp1,exp2,exp3,…) ，它们将按顺序被追加到文档中。<br><strong>为了避免使用〈script〉标签，所以避免使用document.write方法</strong><br>2.innerHTML ：<br><code>&lt;div id=&quot;testdiv&quot;&gt;
+<h3 id="1-nodeValue-属性设置或返回指定节点的节点值。"><a href="#1-nodeValue-属性设置或返回指定节点的节点值。" class="headerlink" title="1.nodeValue 属性设置或返回指定节点的节点值。"></a>1.nodeValue 属性设置或返回指定节点的节点值。</h3><p>例子：<br>function myFunction()<br>{<br>var c=document.getElementsByTagName(“BUTTON”)[0];<br>var x=document.getElementById(“demo”);<br>x.innerHTML=c.firstChild.nodeValue;<br>}<br><strong>获得第一个 button 元素的节点值</strong></p>
+<h3 id="2-动态创建HTML"><a href="#2-动态创建HTML" class="headerlink" title="2.动态创建HTML"></a>2.动态创建HTML</h3><p>1.document.write()：<br>write() 方法可向文档写入 HTML 表达式或 JavaScript 代码。<br>可列出多个参数(exp1,exp2,exp3,…) ，它们将按顺序被追加到文档中。<br><strong>为了避免使用〈script〉标签，所以避免使用document.write方法</strong><br>2.innerHTML ：<br><code>&lt;div id=&quot;testdiv&quot;&gt;
 &lt;/div&gt;</code><br><code>window.onload = function (){
    var testdiv = document.getElementById(&quot;testdiv&quot;);
    testdiv.innerHTML=&quot;&lt;p&gt;I inserted &lt;em&gt;this&lt;/em&gt;content.&lt;/p&gt;&quot;;
@@ -267,7 +267,7 @@
   var txt= document.creatTextNode(&quot;Hello World&quot;);
   para.appendChild(txt);
 }</code></p>
-<p>###3.根据insertBefore（）编写insertAfter（）<br>insertBefore（）调用<br>parentElement.insertBefore(newElement,targetElement)</p>
+<h3 id="3-根据insertBefore（）编写insertAfter（）"><a href="#3-根据insertBefore（）编写insertAfter（）" class="headerlink" title="3.根据insertBefore（）编写insertAfter（）"></a>3.根据insertBefore（）编写insertAfter（）</h3><p>insertBefore（）调用<br>parentElement.insertBefore(newElement,targetElement)</p>
 <p><code>function insertAfter (newElement,targetElement){
  var parent = targetElement.parentNode;
  if(parent.lastChild == targetElemt){
@@ -408,7 +408,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-nodeValue-属性设置或返回指定节点的节点值。"><span class="nav-number">1.</span> <span class="nav-text">1.nodeValue 属性设置或返回指定节点的节点值。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-动态创建HTML"><span class="nav-number">2.</span> <span class="nav-text">2.动态创建HTML</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-根据insertBefore（）编写insertAfter（）"><span class="nav-number">3.</span> <span class="nav-text">3.根据insertBefore（）编写insertAfter（）</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
