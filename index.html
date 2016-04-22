@@ -206,6 +206,110 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/22/智能时钟v1.0（JS学习笔记）/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-22T09:42:37+08:00" content="2016-04-22">
+              2016-04-22
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="智能时钟v1-0（JS学习笔记）"><a href="#智能时钟v1-0（JS学习笔记）" class="headerlink" title="智能时钟v1.0（JS学习笔记）"></a>智能时钟v1.0（JS学习笔记）</h1><p>标签（空格分隔）： JS</p>
+<hr>
+<p>地址：<a href="http://mimacuowu.cn/time" target="_blank" rel="external">http://mimacuowu.cn/time</a></p>
+<h3 id="主要内容："><a href="#主要内容：" class="headerlink" title="主要内容："></a>主要内容：</h3><p>1.Date对象<br>2.创建数组对应图片。（类似于扑克）<br>3.动态刷新 setInterval函数<br>4.charAt保证兼容性<br>主要函数：<br><code>function changeimg()
+{
+     var aImg=document.getElementsByTagName(&#39;img&#39;);
+       var oDate = new Date();</code><br><code>var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
+     for(i=0;i&lt;aImg.length;i++)
+     {
+            aImg[i].src=&#39;image/&#39;+str.charAt(i)+&#39;.png&#39;;  
+     }          
+}
+window.onload = function(){
+     setInterval(changeimg,1000)
+     changeimg();
+    }</code></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/25/3.24 HTML5（1）/" itemprop="url">
                   3.24 HTML5 (1)
                 </a>
@@ -1081,7 +1185,7 @@ Are you sure you want to continue connecting (yes/no)?</code><br>输入yes、然
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
