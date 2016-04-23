@@ -60,7 +60,7 @@
 <meta name="description">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Dylan's home">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Dylan's home">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
@@ -206,8 +206,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/04/23/DOM高级操作/" itemprop="url">
-                  DOM高级操作
+                <a class="post-title-link" href="/2016/03/25/3.25 HTML5（2）/" itemprop="url">
+                  3.25 HTML5 (2)
                 </a>
               
             
@@ -220,249 +220,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-23T20:00:07+08:00" content="2016-04-23">
-              2016-04-23
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="DOM高级操作"><a href="#DOM高级操作" class="headerlink" title="DOM高级操作"></a>DOM高级操作</h1><p>标签（空格分隔）： 未分类</p>
-<hr>
-<h2 id="表格操作"><a href="#表格操作" class="headerlink" title="表格操作"></a>表格操作</h2><p>获取：<br>tBodies、tHead、tFoot、rows、cells(单元格)</p>
-<p>搜索：<br>1.字符串比较<br>2.忽略大小写<br>3.模糊搜索 search<br>4.多关键字 split</p>
-<pre><code>&lt;script&gt;
-</code></pre><p>   window.onload=function()<br>   {<br>      oTab=document.getElementById(‘tab1’);<br>      oBtn=document.getElementById(‘btn1’);<br>      oTet=document.getElementById(‘name’);</p>
-<pre><code>oBtn.onclick=function()
-{ 
-   for(var i=0;i&lt;oTab.tBodies[0].rows.length;i++)
-   {
-     var sTab=oTab.tBodies[0].rows[i].cells[1].innerHTML.toLowerCase();  //大小忽略
-     var sTet=oTet.value.toLowerCase();
-     var arr=sTet.split(&apos; &apos;);   //多个关键字 用空格隔开
-
-     oTab.tBodies[0].rows[i].style.background=&apos;&apos;;  
-     for(j=0;j&lt;arr.length;j++)
-     {
-     if(sTab.search(arr[j])!=-1)    //模糊搜索
-     {
-       oTab.tBodies[0].rows[i].style.background=&apos;yellow&apos;;
-     }    
-     }
-   }  
-}
-</code></pre><p>   }<br></p>
-<h2 id="表格增加"><a href="#表格增加" class="headerlink" title="表格增加"></a>表格增加</h2><pre><code>window.onload=function()
-</code></pre><p>  {<br>     var oTab=document.getElementById(‘tab1’);</p>
-<pre><code>var oBtn=document.getElementById(&apos;btn1&apos;);
-var oName=document.getElementById(&apos;name&apos;);
-var oAge=document.getElementById(&apos;age&apos;);
-
-oBtn.onclick=function()
-{
-    var oTr=document.createElement(&apos;tr&apos;);
-
-    var oTd=document.createElement(&apos;td&apos;);
-    oTd.innerHTML=oTab.tBodies[0].rows.length+1;
-    oTr.appendChild(oTd);
-    var oTd=document.createElement(&apos;td&apos;);
-    oTd.innerHTML=oName.value;
-    oTr.appendChild(oTd);
-    var oTd=document.createElement(&apos;td&apos;);
-    oTd.innerHTML=oAge.value;
-    oTr.appendChild(oTd);
-
-    oTab.tBodies[0].appendChild(oTr);
-
-} 
-</code></pre><p>   }<br><strong>appendChild-先把元素从原来的父级删除，然后添加到新的父级</strong></p>
-<h1 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h1><p>向服务器提交数据，比如用户注册。<br>action 提交到哪里</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/22/智能时钟v1.0（JS学习笔记）/" itemprop="url">
-                  智能时钟v1.0（JS学习笔记）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-22T09:42:37+08:00" content="2016-04-22">
-              2016-04-22
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="智能时钟v1-0（JS学习笔记）"><a href="#智能时钟v1-0（JS学习笔记）" class="headerlink" title="智能时钟v1.0（JS学习笔记）"></a>智能时钟v1.0（JS学习笔记）</h1><p>标签（空格分隔）： JS</p>
-<hr>
-<p>地址：<a href="http://mimacuowu.cn/time" target="_blank" rel="external">http://mimacuowu.cn/time</a></p>
-<h3 id="主要内容："><a href="#主要内容：" class="headerlink" title="主要内容："></a>主要内容：</h3><p>1.Date对象<br>2.创建数组对应图片。（类似于扑克）<br>3.动态刷新 setInterval函数<br>4.charAt保证兼容性<br>主要函数：<br><code>function changeimg()
-{
-     var aImg=document.getElementsByTagName(&#39;img&#39;);
-       var oDate = new Date();</code><br><code>var str=toDou(oDate.getHours())+toDou(oDate.getMinutes())+toDou(oDate.getSeconds());
-     for(i=0;i&lt;aImg.length;i++)
-     {
-            aImg[i].src=&#39;image/&#39;+str.charAt(i)+&#39;.png&#39;;  
-     }          
-}
-window.onload = function(){
-     setInterval(changeimg,1000)
-     changeimg();
-    }</code></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/25/3.24 HTML5（1）/" itemprop="url">
-                  3.24 HTML5 (1)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-25T19:59:12+08:00" content="2016-03-25">
+            <time itemprop="dateCreated" datetime="2016-03-25T19:58:16+08:00" content="2016-03-25">
               2016-03-25
             </time>
           </span>
@@ -490,14 +248,121 @@ window.onload = function(){
 
       
         
-          <p> 3.24学习笔记</p>
-<p>标签（空格分隔）： HTML5—</p>
-<h2 id="1-什么是HTML。"><a href="#1-什么是HTML。" class="headerlink" title="1.什么是HTML。"></a>1.什么是HTML。</h2><p> HTML用于详细规定少量构建网页的元素。<br> 这些元素中大多数都用于描述网页内容，如标题、段落、列表等。</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><p>img元素是显示图片的首选元素<br><img src="" width="" height="" alt="" /><br>p元素标记段落，其中em元素表示强调，a元素可以定义链接。</p>
-<h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h2><p>Html的标记主要包括element、attribute、value</p>
-<h2 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h2><p>URL:Uniform Resource Locator<br>基本的URL包含模式、服务器名称、路径和文件名。
+          
+            <p> 3.25 HTML5（2）</p>
+<p>标签（空格分隔）： HTML5</p>
+<hr>
+<h1 id="基本HTML结构"><a href="#基本HTML结构" class="headerlink" title="基本HTML结构"></a>基本HTML结构</h1><p>1.创建页眉<code>&lt;header&gt; &lt;/header&gt;</code><br>2.标记导航 <code>&lt;nav&gt;&lt;/nav&gt;</code><br>3.创建文章<code>〈article〉&lt;/article&gt;</code><br><strong>4.artcle和section的区别。<br>article元素可以看成是一种特殊类型的section元素，它比section元素更强调独立性。即section元素强调分段或分块，而article强调独立性。具体来说，如果一块内容相对来说比较独立的、完整的时候，应该使用article元素，但是如果你想将一块内容分成几段的时候，应该使用section元素。另外，在HTML5中，div元素变成了一种容器，当使用CSS样式的时候，可以对这个容器进行一个总体的CSS样式的套用。</strong><br>4.标记侧栏。aside。<br>尽管他是对侧栏内容的标记，但是它本身不影响页面布局。<br>5.创建页脚footer。<br><strong>通用容器<code>&lt;div&gt;</code> 有了通用容器，我们就可以为其添加CSS或JavaScript效果了。</strong></p>
+<h1 id="为元素指定类别或ID名称。"><a href="#为元素指定类别或ID名称。" class="headerlink" title="为元素指定类别或ID名称。"></a>为元素指定类别或ID名称。</h1><p>1.唯一标识符的方法 id=“name”<br>2.指定类别的方法class = “name”<br><em>id属性会自动将该元素转化成锚，可以创建指到这里的链接</em></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/24/小试牛刀 -- 科比相册/" itemprop="url">
+                  小试牛刀 -- 科比相册
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-24T12:21:37+08:00" content="2016-03-24">
+              2016-03-24
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p> 小试牛刀 – 科比相册</p>
+<p>标签（空格分隔）： DOM</p>
+<hr>
+<p>学了DOM怎能不为科比建相册，乱搞= = </p>
+<p>#地址：<a href="http://kobe.mimacuowu.cn">http://kobe.mimacuowu.cn</a> JS中的函数（DOM脚本）</p>
+<ol>
+<li>addLoadEvent()<br><strong>解决了window.onload只能绑定一个函数的缺点</strong><br><code>function addLoadEvent(func) {
+var oldonload = window.onload;
+if(typeof window.onload != &#39;function&#39;)
+{
+window.onload = func;
+}else
+ {
+window.onload = function()
+  {
+oldonload();
+func();
+   }
+  }
+}</code>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/25/3.24 HTML5（1）/#more" rel="contents">
+            <a class="btn" href="/2016/03/24/小试牛刀 -- 科比相册/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -544,8 +409,8 @@ window.onload = function(){
             
               
                 
-                <a class="post-title-link" href="/2016/03/25/3.25 Javascript基本知识（语法）/" itemprop="url">
-                  3.25 Javascript基本知识
+                <a class="post-title-link" href="/2016/03/24/3.22笔记/" itemprop="url">
+                  3.22笔记
                 </a>
               
             
@@ -558,8 +423,8 @@ window.onload = function(){
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-25T19:58:51+08:00" content="2016-03-25">
-              2016-03-25
+            <time itemprop="dateCreated" datetime="2016-03-24T12:21:37+08:00" content="2016-03-24">
+              2016-03-24
             </time>
           </span>
 
@@ -587,20 +452,11 @@ window.onload = function(){
       
         
           
-            <p> 3.25 Javascript基本知识（语法）</p>
-<p>标签（空格分隔）： JavaScript</p>
+            <h1 id="3-22笔记"><a href="#3-22笔记" class="headerlink" title="3.22笔记"></a>3.22笔记</h1><p>标签（空格分隔）： 未分类</p>
 <hr>
-<p>Js的语法与C语言等有很多相似之处，我只记录有差异的，或者比较容易错的。</p>
-<h1 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h1><p>javascript的变量类型是松散类型的（var）,可以用来保存任意类型的数据。</p>
-<h1 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h1><p>javascript的数据类型有<br>ECMAScript中有5种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number和String。还有1种复杂数据类型——Object，其本质是一组 无序 的名值对组成<br>Number类型：<br>ECMAScript能保存的最小数值保存在Number.MIN_VALUE中，最大数值保存在Number.MAX_VALUE中<br>+（-）Infinity表示无穷保存在Number.NEGATIVE_INFINOTY和Number.POSITIVE_INFINITY中。<br>isNaN(a)函数可以确定一个参数a是不是数值，是数值返回false。</p>
-<p>String类型：<br>把一个值转换为字符串的方法1.toString（）；2.</p>
-<h1 id="操作符："><a href="#操作符：" class="headerlink" title="操作符："></a>操作符：</h1><p>+：如果两个操作数都是字符，则将两个字符串连接起来<br>如果只有一个操作数是字符串，则将另外一个操作数转换成字符串再将他们拼接</p>
-<p>全等（===）：它指在两个操作数在未经转换的情况下就相等的情况 Null===Undefined返回False</p>
-<h1 id="语句："><a href="#语句：" class="headerlink" title="语句："></a>语句：</h1><p>for…in 语句用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。<br>label语句可以在代码中添加标签，一般配合break、continue使用。。</p>
-<p>with语句将代码的作用域设置到一个特定的对象中。</p>
-<h1 id="函数："><a href="#函数：" class="headerlink" title="函数："></a>函数：</h1><p>arguements对象：通过访问arguments对象的length属性可以知道有多少个参数传给了函数</p>
-<p>HTML5实践：往Kobe网站中添加音乐<br><code>&lt;audio src=&quot;music/rtn.mp3&quot; loop=&quot;loop&quot; preload=&quot;auto&quot; controls=&quot;controls&quot;&gt;remember the 
-name&lt;/audio&gt;</code></p>
+<h2 id="1-遇到了alert（）无效的问题（弱鸡）"><a href="#1-遇到了alert（）无效的问题（弱鸡）" class="headerlink" title="1. 遇到了alert（）无效的问题（弱鸡）"></a>1. 遇到了alert（）无效的问题（弱鸡）</h2><p>直接输入alert()无效<br>必须是<br><code>&lt;script&gt;
+alert (description.nodeValue);
+&lt;/script&gt;</code></p>
 
           
         
@@ -646,8 +502,8 @@ name&lt;/audio&gt;</code></p>
             
               
                 
-                <a class="post-title-link" href="/2016/03/25/初识DOM脚本（1）/" itemprop="url">
-                  初识DOM脚本（1）
+                <a class="post-title-link" href="/2016/03/23/3.21 CSS学习笔记（1）/" itemprop="url">
+                  3.21 CSS学习笔记（1）
                 </a>
               
             
@@ -660,8 +516,8 @@ name&lt;/audio&gt;</code></p>
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-25T19:58:35+08:00" content="2016-03-25">
-              2016-03-25
+            <time itemprop="dateCreated" datetime="2016-03-23T16:21:34+08:00" content="2016-03-23">
+              2016-03-23
             </time>
           </span>
 
@@ -688,33 +544,105 @@ name&lt;/audio&gt;</code></p>
 
       
         
-          
-            <p> 初识DOM脚本（1）</p>
-<p>标签（空格分隔）： DOM</p>
+          <h1 id="基础知识点（粗劣了解）"><a href="#基础知识点（粗劣了解）" class="headerlink" title="基础知识点（粗劣了解）"></a>基础知识点（粗劣了解）</h1><p>标签（空格分隔）： CSS</p>
 <hr>
-<h3 id="1-nodeValue-属性设置或返回指定节点的节点值。"><a href="#1-nodeValue-属性设置或返回指定节点的节点值。" class="headerlink" title="1.nodeValue 属性设置或返回指定节点的节点值。"></a>1.nodeValue 属性设置或返回指定节点的节点值。</h3><p>例子：<br>function myFunction()<br>{<br>var c=document.getElementsByTagName(“BUTTON”)[0];<br>var x=document.getElementById(“demo”);<br>x.innerHTML=c.firstChild.nodeValue;<br>}<br><strong>获得第一个 button 元素的节点值</strong></p>
-<h3 id="2-动态创建HTML"><a href="#2-动态创建HTML" class="headerlink" title="2.动态创建HTML"></a>2.动态创建HTML</h3><p>1.document.write()：<br>write() 方法可向文档写入 HTML 表达式或 JavaScript 代码。<br>可列出多个参数(exp1,exp2,exp3,…) ，它们将按顺序被追加到文档中。<br><strong>为了避免使用〈script〉标签，所以避免使用document.write方法</strong><br>2.innerHTML ：<br><code>&lt;div id=&quot;testdiv&quot;&gt;
-&lt;/div&gt;</code><br><code>window.onload = function (){
-   var testdiv = document.getElementById(&quot;testdiv&quot;);
-   testdiv.innerHTML=&quot;&lt;p&gt;I inserted &lt;em&gt;this&lt;/em&gt;content.&lt;/p&gt;&quot;;
-}</code><br>3.DOM提供的方法：<br>creatElement()+appendChild()+createTextNode（）<br>例子：<br><code>window.onload = function(){
-  var para = document.createElement(&quot;p&quot;)
-  var testdiv = document.getElementById(&quot;testdiv&quot;);
-  testdiv.appendChild(para);
-  var txt= document.creatTextNode(&quot;Hello World&quot;);
-  para.appendChild(txt);
-}</code></p>
-<h3 id="3-根据insertBefore（）编写insertAfter（）"><a href="#3-根据insertBefore（）编写insertAfter（）" class="headerlink" title="3.根据insertBefore（）编写insertAfter（）"></a>3.根据insertBefore（）编写insertAfter（）</h3><p>insertBefore（）调用<br>parentElement.insertBefore(newElement,targetElement)</p>
-<p><code>function insertAfter (newElement,targetElement){
- var parent = targetElement.parentNode;
- if(parent.lastChild == targetElemt){
-   parent.appendChild(newElement);
- }else{
-  parent.insertBefore(newElement,targetElement.nextSibling);
- }
-}</code></p>
+<h1 id="1-css"><a href="#1-css" class="headerlink" title="1. css"></a>1. css</h1><h3 id="CSS的优点"><a href="#CSS的优点" class="headerlink" title="CSS的优点"></a>CSS的优点</h3><p>1.实现精确控制页面每一个元素的字体，排列方式，大小，颜色等。<br>2.简化网页格式代码。<br>3.外部链接样式实现同时定义多个页面。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/23/3.21 CSS学习笔记（1）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/21/如何利用github和hexo搭建搭建个人博客/" itemprop="url">
+                  如何利用github和hexo搭建搭建个人博客
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-21T19:10:13+08:00" content="2016-03-21">
+              2016-03-21
+            </time>
+          </span>
 
           
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="前记："><a href="#前记：" class="headerlink" title="前记："></a>前记：</h2><p>  <em>出于兴趣从网上找到一些通过GITHUB搭建个人博客的文章，看完之后觉得挺有意思的，所以决定自己也动手搭建一个属于自己的博客，同时也希望利用其对自己在WEB前端技术学习过程中遇到的问题和难点进行记录，希望它能伴随我的成长，我的电脑是WIN8系统，搭建过程中会有一些网上其他文章所没有提到的地方，我会详细提出。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/21/如何利用github和hexo搭建搭建个人博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -741,7 +669,7 @@ name&lt;/audio&gt;</code></p>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
   </nav>
 
 
