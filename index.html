@@ -206,8 +206,146 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/23/DOM高级操作/" itemprop="url">
+                  DOM高级操作
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-23T20:00:07+08:00" content="2016-04-23">
+              2016-04-23
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="DOM高级操作"><a href="#DOM高级操作" class="headerlink" title="DOM高级操作"></a>DOM高级操作</h1><p>标签（空格分隔）： 未分类</p>
+<hr>
+<h2 id="表格操作"><a href="#表格操作" class="headerlink" title="表格操作"></a>表格操作</h2><p>获取：<br>tBodies、tHead、tFoot、rows、cells(单元格)</p>
+<p>搜索：<br>1.字符串比较<br>2.忽略大小写<br>3.模糊搜索 search<br>4.多关键字 split</p>
+<pre><code>&lt;script&gt;
+</code></pre><p>   window.onload=function()<br>   {<br>      oTab=document.getElementById(‘tab1’);<br>      oBtn=document.getElementById(‘btn1’);<br>      oTet=document.getElementById(‘name’);</p>
+<pre><code>oBtn.onclick=function()
+{ 
+   for(var i=0;i&lt;oTab.tBodies[0].rows.length;i++)
+   {
+     var sTab=oTab.tBodies[0].rows[i].cells[1].innerHTML.toLowerCase();  //大小忽略
+     var sTet=oTet.value.toLowerCase();
+     var arr=sTet.split(&apos; &apos;);   //多个关键字 用空格隔开
+
+     oTab.tBodies[0].rows[i].style.background=&apos;&apos;;  
+     for(j=0;j&lt;arr.length;j++)
+     {
+     if(sTab.search(arr[j])!=-1)    //模糊搜索
+     {
+       oTab.tBodies[0].rows[i].style.background=&apos;yellow&apos;;
+     }    
+     }
+   }  
+}
+</code></pre><p>   }<br></p>
+<h2 id="表格增加"><a href="#表格增加" class="headerlink" title="表格增加"></a>表格增加</h2><pre><code>window.onload=function()
+</code></pre><p>  {<br>     var oTab=document.getElementById(‘tab1’);</p>
+<pre><code>var oBtn=document.getElementById(&apos;btn1&apos;);
+var oName=document.getElementById(&apos;name&apos;);
+var oAge=document.getElementById(&apos;age&apos;);
+
+oBtn.onclick=function()
+{
+    var oTr=document.createElement(&apos;tr&apos;);
+
+    var oTd=document.createElement(&apos;td&apos;);
+    oTd.innerHTML=oTab.tBodies[0].rows.length+1;
+    oTr.appendChild(oTd);
+    var oTd=document.createElement(&apos;td&apos;);
+    oTd.innerHTML=oName.value;
+    oTr.appendChild(oTd);
+    var oTd=document.createElement(&apos;td&apos;);
+    oTd.innerHTML=oAge.value;
+    oTr.appendChild(oTd);
+
+    oTab.tBodies[0].appendChild(oTr);
+
+} 
+</code></pre><p>   }<br><strong>appendChild-先把元素从原来的父级删除，然后添加到新的父级</strong></p>
+<h1 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h1><p>向服务器提交数据，比如用户注册。<br>action 提交到哪里</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/22/智能时钟v1.0（JS学习笔记）/" itemprop="url">
-                  未命名
+                  智能时钟v1.0（JS学习笔记）
                 </a>
               
             
@@ -352,25 +490,17 @@ window.onload = function(){
 
       
         
-          
-            <p> 3.24学习笔记</p>
+          <p> 3.24学习笔记</p>
 <p>标签（空格分隔）： HTML5—</p>
 <h2 id="1-什么是HTML。"><a href="#1-什么是HTML。" class="headerlink" title="1.什么是HTML。"></a>1.什么是HTML。</h2><p> HTML用于详细规定少量构建网页的元素。<br> 这些元素中大多数都用于描述网页内容，如标题、段落、列表等。</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><p>img元素是显示图片的首选元素<br><img src="" width="" height="" alt=""><br>p元素标记段落，其中em元素表示强调，a元素可以定义链接。</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><p>img元素是显示图片的首选元素<br><img src="" width="" height="" alt="" /><br>p元素标记段落，其中em元素表示强调，a元素可以定义链接。</p>
 <h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h2><p>Html的标记主要包括element、attribute、value</p>
-<h2 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h2><p>URL:Uniform Resource Locator<br>基本的URL包含模式、服务器名称、路径和文件名。<br>模式：http超文本传输协议、ftp文件传输协议、https用于安全网页 </p>
-<p><strong>语义化是指用合理HTML标记以及其特有的属性去格式化文档内容。</strong></p>
-<h2 id="5-什么是HTML5？"><a href="#5-什么是HTML5？" class="headerlink" title="5.什么是HTML5？"></a>5.什么是HTML5？</h2><p>HTML5的设计目的是为了在移动设备上支持多媒体。超文本标记语言（HTML）的第五次重大修改。主要的目标是将互联网语义化，以便更好地被人类和机器阅读，并同时提供更好地支持各种媒体的嵌入。</p>
-<h1 id="实体字符"><a href="#实体字符" class="headerlink" title="实体字符"></a>实体字符</h1><p>在HTML中，某些字符是预留的。在HTML中不能使用小于号（&lt;）和大于号（&gt;），这是因为浏览器会误认为它们是标签。如果希望正确地显示预留字符，必须在 HTML 源代码中使用字符实体（character entities）。<br>常用实体字符：<br>不间断空格：<code>&amp;nbsp;</code><br>（浏览器总是会截短 HTML 页面中的空格。如果您在文本中写 10 个空格，在显示该页面之前，浏览器会删除它们中的 9 个。如需在页面中增加空格的数量，您需要使用<code>&amp;nbsp;</code> 字符实体。）</p>
-<h2>HTML 中有用的字符实体</h2>
-
-<p class="note"><span>注释：</span>实体名称对大小写敏感！</p>
-
-<table class="dataintable"><br>    <tr><br>      <th style="width:20%">显示结果</th><br>      <th style="width:20%">描述</th><br>      <th style="width:30%">实体名称</th><br>      <th style="width:30%">实体编号</th><br>    </tr><br><br>    <tr><br>      <td>&nbsp;</td><br>      <td>空格</td><br>      <td>&amp;nbsp;</td><br>      <td>&amp;#160;</td><br>    </tr><br><br>    <tr><br>      <td>&#60;</td><br>      <td>小于号</td><br>      <td>&amp;lt;</td><br>      <td>&amp;#60;</td><br>    </tr><br><br>    <tr><br>      <td>&gt;</td><br>      <td>大于号</td><br>      <td>&amp;gt;</td><br>      <td>&amp;#62;</td><br>    </tr><br><br>    <tr><br>      <td>&amp;</td><br>      <td>和号</td><br>      <td>&amp;amp;</td><br>      <td>&amp;#38;</td><br>    </tr><br><br>    <tr><br>      <td>&quot;</td><br>      <td>引号</td><br>      <td>&amp;quot;</td><br>      <td>&amp;#34;</td><br>    </tr><br><br>    <tr><br>      <td>‘</td><br>      <td>撇号&nbsp;</td><br>      <td>&amp;apos; (IE不支持)</td><br>      <td>&amp;#39;</td><br>    </tr><br><br>    <tr><br>      <td>￠</td><br>      <td>分</td><br>      <td>&amp;cent;</td><br>      <td>&amp;#162;</td><br>    </tr><br><br>    <tr><br>      <td>&pound;</td><br>      <td>镑</td><br>      <td>&amp;pound;</td><br>      <td>&amp;#163;</td><br>    </tr><br><br>    <tr><br>      <td>&yen;</td><br>      <td>日圆</td><br>      <td>&amp;yen;</td><br>      <td>&amp;#165;</td><br>    </tr><br><br>    <tr><br>      <td>&euro;</td><br>      <td>欧元</td><br>      <td>&amp;euro;</td><br>      <td>&amp;#8364;</td><br>    </tr><br><br>    <tr><br>      <td>§</td><br>      <td>小节</td><br>      <td>&amp;sect;</td><br>      <td>&amp;#167;</td><br>    </tr><br><br>    <tr><br>      <td>&copy;</td><br>      <td>版权</td><br>      <td>&amp;copy;</td><br>      <td>&amp;#169;</td><br>    </tr><br><br>    <tr><br>      <td>&#174;</td><br>      <td>注册商标</td><br>      <td>&amp;reg;</td><br>      <td>&amp;#174;</td><br>    </tr><br><br>    <tr><br>      <td>&trade;</td><br>      <td>商标</td><br>      <td>&amp;trade;</td><br>      <td>&amp;#8482;</td><br>    </tr><br><br>    <tr><br>      <td>×</td><br>      <td>乘号</td><br>      <td>&amp;times;</td><br>      <td>&amp;#215;</td><br>    </tr><br><br>    <tr><br>      <td>÷</td><br>      <td>除号</td><br>      <td>&amp;divide;</td><br>      <td>&amp;#247;</td><br>    </tr><br></table>
-
-
-
-          
+<h2 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h2><p>URL:Uniform Resource Locator<br>基本的URL包含模式、服务器名称、路径和文件名。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/25/3.24 HTML5（1）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -763,12 +893,11 @@ name&lt;/audio&gt;</code></p>
 
       
         
-          
-            <p> 小试牛刀 – 科比相册</p>
+          <p> 小试牛刀 – 科比相册</p>
 <p>标签（空格分隔）： DOM</p>
 <hr>
 <p>学了DOM怎能不为科比建相册，乱搞= = </p>
-<p>#地址：<a href="http://kobe.mimacuowu.cn" target="_blank" rel="external">http://kobe.mimacuowu.cn</a> JS中的函数（DOM脚本）</p>
+<p>#地址：<a href="http://kobe.mimacuowu.cn">http://kobe.mimacuowu.cn</a> JS中的函数（DOM脚本）</p>
 <ol>
 <li>addLoadEvent()<br><strong>解决了window.onload只能绑定一个函数的缺点</strong><br><code>function addLoadEvent(func) {
 var oldonload = window.onload;
@@ -783,23 +912,12 @@ oldonload();
 func();
    }
   }
-}</code><br>调用方法addLoadEvent(func);这里的func 就是需要调用的函数，<br>function addLoadEvent(func){创建了一个函数名为addLoadEvent,参数为func的函数，这里把我们需要加载的函数作为参数在这个addLoadEvent函数中进行调用。}<br>var oldonload=window.onload 定义一个变量,把window.onload赋给oldonload，如果开始的时候window.onload调用了一个函数A()，那么在这里oldonload就等于A();<br>//typeof 判断一个变量的类型，如果window.onload调用的是一个函数，那么这个if条件语句的值就是true那么就执行window.onload=func;(此时的参数func就是我们需要调用的函数)<br>如果条件语句的结果是false，那么就调用一个匿名的函数window.onload=function(){oldonload();func();}<br>这个匿名的函数 会先执行oldonload()函数,然后执行func（）这个函数。<br>也就是说，会先调用 正在执行的那个函数，然后在调用我们需要调用的函数A().</li>
-</ol>
-<ol>
-<li>insertAfter()<br><code>function insertAfter(newElement, targetElement){
-var parent = targetElement.parentNode;
-if (parent.lastChild == targetElement) {
-// 如果最后的节点是目标元素，则直接添加。因为默认是最后
-parent.appendChild(newElement);
-}
-else {
-parent.insertBefore(newElement, targetElement.nextSibling);
-//如果不是，则插入在目标元素的下一个兄弟节点 的前面。也就是目标元素的后面
-}
-}</code><br>##用到的DOM方法集<br>1.document.getElementById(id)<br>getElementById() 方法可返回对拥有指定 ID 的第一个对象的引用。<br>2.document.getElementsByTagName(tagname)<br>getElementsByTagName() 方法可返回带有指定标签名的对象的集合。<br>3.createElement() 方法<br>可创建元素节点。<br>4.createTextNode()<br>可创建文本节点<br>5.element.setAttribute(attributename,attributevalue)<br>添加指定的属性，并为其赋指定的值。如果这个指定的属性已存在，则仅设置/更改值。</li>
-</ol>
-
-          
+}</code>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/24/小试牛刀 -- 科比相册/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -978,35 +1096,14 @@ alert (description.nodeValue);
 
       
         
-          
-            <h1 id="基础知识点（粗劣了解）"><a href="#基础知识点（粗劣了解）" class="headerlink" title="基础知识点（粗劣了解）"></a>基础知识点（粗劣了解）</h1><p>标签（空格分隔）： CSS</p>
+          <h1 id="基础知识点（粗劣了解）"><a href="#基础知识点（粗劣了解）" class="headerlink" title="基础知识点（粗劣了解）"></a>基础知识点（粗劣了解）</h1><p>标签（空格分隔）： CSS</p>
 <hr>
-<h1 id="1-css"><a href="#1-css" class="headerlink" title="1. css"></a>1. css</h1><h3 id="CSS的优点"><a href="#CSS的优点" class="headerlink" title="CSS的优点"></a>CSS的优点</h3><p>1.实现精确控制页面每一个元素的字体，排列方式，大小，颜色等。<br>2.简化网页格式代码。<br>3.外部链接样式实现同时定义多个页面。</p>
-<h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><ol>
-<li><p>基础选择器<br>| 选择器     | 含义  |<br>| ——–   | —–:  |<br>| *    | 通用元素选择器，匹配任何元素 |<br>| E      |  标签选择器，匹配所有使用E标签的元素 |<br>| .info和E.info       |    \$1  class选择器，匹配所有class属性中包含info的元素</p>
-</li>
-<li></li>
-<li>列表项</li>
-<li><h3 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h3>又称为框模型，从内到外分别是内容，内边距，边框，外边距<br>引用W3School的Box Model 图解:<br><img src="http://static.oschina.net/uploads/img/201503/10153449_0pQu.gif" alt="此处输入图片的描述"><br>说明：</li>
-</ol>
-<p>　　1.和第一幅图一样，在上图中，元素框的最内部分是实际的内容（element）；直接包围内容的是内边距（padding），内边距呈现了元 素的背景（background）；内边距的边缘是边框（border）；边框以外是外边距（margin），外边距默认是透明的，因此不会遮挡其后的任 何元素（其实元素的margin就是其所在父元素的padding）。元素的背景应用于由内容和内边距、边框组成的区域。</p>
-<p>　　2.内边距、边框和外边距都是可选的，默认值是零。但是，许多元素将由用户代理样式表设置外边距和内边距。可以通过将元素的 margin 和 padding 设置为零来覆盖这些浏览器样式。这可以分别进行，也可以使用通用选择器（<em>）对所有元素进行设置：<br>`　　/</em> 设置所有元素的外边距和内边矩为0/<br>{<br>  margin: 0;<br>  padding: 0;<br>  }`</p>
-<ol>
-<li>在 CSS 中，width 和 height 指的是内容区域（element）的宽度和高度。增加内边距、边框和外边距不会影响内容区域的尺寸，但是会增加元素框的总尺寸。假设框的每个边上有 10 个像素的外边距和 5 个像素的内边距。如果希望这个元素框达到 100 个像素，就需要将内容的宽度设置为 70 像素，以下是CSS代码<br><code># box {
-width: 70px;
-margin: 10px;
-padding: 5px;
-}</code><br><img src="http://static.oschina.net/uploads/img/201503/10153449_7dQk.gif" alt="此处输入图片的描述"><h2 id="标准盒子"><a href="#标准盒子" class="headerlink" title="标准盒子"></a>标准盒子</h2><img src="http://images.cnblogs.com/cnblogs_com/cchyao/%E6%A0%87%E5%87%86W3C%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E5%92%8CIE%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8BCSS%E5%B8%83%E5%B1%80%E7%BB%8F%E5%85%B8%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/1.JPG" alt="此处输入图片的描述"></li>
-</ol>
-<p>##IE盒子 ##<br><img src="http://images.cnblogs.com/cnblogs_com/cchyao/%E6%A0%87%E5%87%86W3C%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E5%92%8CIE%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8BCSS%E5%B8%83%E5%B1%80%E7%BB%8F%E5%85%B8%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/2.JPG" alt="此处输入图片的描述"><br>　　从上图可以看到 ie 盒子模型的范围也包括 margin、border、padding、content，和标准 w3c 盒子模型不同的是：ie 盒子模型的 content 部分包含了 border 和 pading。</p>
-<p>　 　例：一个盒子的 margin 为 20px，border 为 1px，padding 为 10px，content 的宽为 200px、高为 50px，假如用标准 w3c 盒子模型解释，那么这个盒子需要占据的位置为：宽 20<em>2+1</em>2+10<em>2+200=262px、高 20</em>2+1<em>2</em>10<em>2+50=112px，盒子的实际大小为：宽 1</em>2+10<em>2+200=222px、高 1</em>2+10<em>2+50=72px；假如用ie 盒子模型，那么这个盒子需要占据的位置为：宽 20</em>2+200=240px、高 20*2+50=70px，盒子的实际大小为：宽 200px、高 50px。</p>
-<p>　　那应该选择哪中盒子模型呢？当然是“标准 w3c 盒子模型”了。怎么样才算是选择了“标准 w3c 盒子模型”呢？很简单，就是在网页的顶部加上 doctype 声明。假如不加 doctype 声明，那么各个浏览器会根据自己的行为去理解网页，即 ie 浏览器会采用 ie 盒子模型去解释你的盒子，而 ff 会采用标准 w3c 盒子模型解释你的盒子，所以网页在不同的浏览器中就显示的不一样了。反之，假如加上了 doctype 声明，那么所有浏览器都会采用标准 w3c 盒子模型去解释你的盒子，网页就能在各个浏览器中显示一致了。<br>声明代码：<br><code>&lt;!doctype html public &quot;-//w3c//dtd xhtml 1.0 transitional//en&quot; &quot;http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd&quot;&gt;</code></p>
-<h3 id="CSS控制文本："><a href="#CSS控制文本：" class="headerlink" title="CSS控制文本："></a>CSS控制文本：</h3><p>文本水平对齐方式： text-align: left/right/center/justify<br>文本缩进：text-indent:value<br>文本字符间距：letter-spacing<br>设置行高：line-height: 100%（一般浏览器为110%~120%）<br>控制文本的大小写：text-transform:capitalize/uppercase/lowercase/</p>
-<h3 id="CSS控制背景："><a href="#CSS控制背景：" class="headerlink" title="CSS控制背景："></a>CSS控制背景：</h3><p>背景颜色：background-color:<br>设置背景图片：background-image<br><code>body {background-image: url(/i/eg_bg_04.gif);} //为Body元素设置
-p.flower {background-image: url(/i/eg_bg_03.gif); //为段落设置背景
-a.radio {background-image: url(/i/eg_bg_07.gif);} //为段内元素设置背景</code><br>背景重复：background-repeat<br>不重复：no-repeat x轴方向重复 repeat-x y轴方向重复 repeat-y<br>背景固定：background-attachment：fixed</p>
-
-          
+<h1 id="1-css"><a href="#1-css" class="headerlink" title="1. css"></a>1. css</h1><h3 id="CSS的优点"><a href="#CSS的优点" class="headerlink" title="CSS的优点"></a>CSS的优点</h3><p>1.实现精确控制页面每一个元素的字体，排列方式，大小，颜色等。<br>2.简化网页格式代码。<br>3.外部链接样式实现同时定义多个页面。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/23/3.21 CSS学习笔记（1）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1092,36 +1189,12 @@ a.radio {background-image: url(/i/eg_bg_07.gif);} //为段内元素设置背景<
 
       
         
-          
-            <h2 id="前记："><a href="#前记：" class="headerlink" title="前记："></a>前记：</h2><p>  <em>出于兴趣从网上找到一些通过GITHUB搭建个人博客的文章，看完之后觉得挺有意思的，所以决定自己也动手搭建一个属于自己的博客，同时也希望利用其对自己在WEB前端技术学习过程中遇到的问题和难点进行记录，希望它能伴随我的成长，我的电脑是WIN8系统，搭建过程中会有一些网上其他文章所没有提到的地方，我会详细提出。</em></p>
-<hr>
-<h2 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h2><p>  至于为什么使用github网上有很多资料，在此我就不赘述了。hexo和jekyll都是静态博客框架，他们的区别是一个用 node-js，一个用 Ruby ,jekyll 你把原文上传 github，可以直接生成博客，也可以用在线编辑器处理，而hexo 是本地生成 html再上传。我对比一下选择了hexo，因为node比较容易安装，而且 JS 的速度比 Ruby 更快。</p>
-<h3 id="1-使用到的工具："><a href="#1-使用到的工具：" class="headerlink" title="1.使用到的工具："></a>1.使用到的工具：</h3><ol>
-<li><a href="http://git-scm.com/downloads" target="_blank" rel="external">Git</a></li>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
-</ol>
-<h3 id="2-安装和使用hexo："><a href="#2-安装和使用hexo：" class="headerlink" title="2.安装和使用hexo："></a>2.安装和使用hexo：</h3><h4 id="首先确认你已经安装好上面提到的工具。"><a href="#首先确认你已经安装好上面提到的工具。" class="headerlink" title="首先确认你已经安装好上面提到的工具。"></a><strong>首先确认你已经安装好上面提到的工具</strong>。</h4><h4 id="I-安装hexo"><a href="#I-安装hexo" class="headerlink" title="I.安装hexo"></a>I.安装hexo</h4><p>在电脑中建立一个名字叫「Hexo」的文件夹（比如我建在了G:\Hexo），然后在此文件夹中右键打开Git Bash。执行下面的命令，即可完成 Hexo 的安装：<br><code>$ npm install -g hexo-cli</code></p>
-<h4 id="II-初始化hexo"><a href="#II-初始化hexo" class="headerlink" title="II.初始化hexo"></a>II.初始化hexo</h4><p>在完成hexo的安装之后，输入以下命令对hexo进行初始化，初始化结束之后，打开「Hexo」文件夹，你会发现里面已经生成许多文件，文件目录如下（截自Hexo官网）：<br><img src="http://ftp499230.host501.zhujiwu.cn/tupian/1.png" alt="1.png"></p>
-<h4 id="III-生成文件的功能"><a href="#III-生成文件的功能" class="headerlink" title="III.生成文件的功能"></a>III.生成文件的功能</h4><ul>
-<li>_config.yml 网站的配置信息，您可以在此配置大部分的参数（特别重要）</li>
-<li>themes 存放主题的文件夹</li>
-<li><p>source 博客资源文件夹，也就是以后存博文的地方<br>其他更详细的功能解释，请到<a href="https://hexo.io/zh-cn/docs/setup.html#scaffolds" target="_blank" rel="external">官方文档</a>查看.</p>
-<h4 id="IV-更换主题。"><a href="#IV-更换主题。" class="headerlink" title="IV.更换主题。"></a>IV.更换主题。</h4><p>1 首先，到官网找到自己喜欢的主题。<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes</a><br>2 然后利用以下代码对主题进行克隆（以light为例）<br><code>$ git clone https://github.com/hexojs/hexo-theme-light.git</code><br>3 然后对主题进行配置，依次输入<br><code>$ cd themes/light</code><br><code>$ git pull</code><br>然后你会发现themes目录里面会多出一个light文件，说明主题配置成功。<br>4 现在可以依次输入：<br><code>$ hexo g</code><br><code>$ hexo s</code></p>
-</li>
-</ul>
-<p>在本地浏览器中输入localhost:4000 即可在本地看到你的个人博客效果 噔噔噔噔，是不是激动= =！。<br><strong>这里推荐一个主题也就是我的博客使用的主题<a href="http://theme-next.iissnan.com/getting-started.html#menu-settings" target="_blank" rel="external">Next</a>，里面有主题的配置过程，还有一些博客页面细节的修改，快去看看吧</strong></p>
-<h3 id="3-利用GitHub使你的个人博客让所有人都能看到"><a href="#3-利用GitHub使你的个人博客让所有人都能看到" class="headerlink" title="3.利用GitHub使你的个人博客让所有人都能看到"></a>3.利用GitHub使你的个人博客让所有人都能看到</h3><ol>
-<li>首先，到<a href="https://github.io" target="_blank" rel="external">官网</a>注册一个GitHub帐号,虽然是全英文但是应该难不倒各位看官吧，不多提了。</li>
-<li>配置和使用GitHub<br>本地git项目与远程的github建立联系呢？它们之间的密匙是什么呢？那就是SSH key。<br>（1）首先我们需要检查你电脑上现有的ssh key：<br><code>$ cd ~/.ssh</code><br>如果显示如下<br><img src="http://ftp499230.host501.zhujiwu.cn/tupian/2.png" alt="2。png"><br>说明你的电脑是第一次使用git。<br>（2）生成新的SSH Key：<br><code>$ ssh-keygen -t rsa -C &quot;邮件地址@youremail.com&quot;</code><br>这里回车就好<br><img src="http://ftp499230.host501.zhujiwu.cn/tupian/3.png" alt="3.png"><br>然后系统会要求你输入密码，如果直接按回车那上传的时候就不需要密码。这样可能会被别人乱动你的项目<br>显示以下界面说明你已经成功配置SSH key<br><img src="http://ftp499230.host501.zhujiwu.cn/tupian/4.png" alt="4，png"><br>（3）添加 SSH Key 到 GitHub：<br>首先<br>win7:打开本地C:\Documents and Settings\Administrator.ssh\id_rsa.pub文件。此文件里面内容为刚才生成人密钥。如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。<br><strong>注意啦，win8 SSH Key存在这里C:\Users\hp-pc.ssh\id_rsa.pub</strong><br>然后登陆github系统，右上角Settings，把你本地生成的密钥复制到里面（key文本框中）， 点击 add key 就ok了。<br><img src="http://ftp499230.host501.zhujiwu.cn/tupian/5.png" alt="5.png"><br><img src="http://ftp499230.host501.zhujiwu.cn/tupian/6.png" alt="6.png"><br><em>（我在这里出现了较多问题，如果你也一样可以私我）</em><br>接下来测试一下配置是否成功，输入以下代码：<br><code>$ ssh -T git@github.com</code><br>如果是下面的反馈：<br><code>The authenticity of host &#39;github.com (207.97.227.239)&#39; can&#39;t be established.
-RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
-Are you sure you want to continue connecting (yes/no)?</code><br>输入yes、然后会看到：<br><code>Hi xxx! You’ve successfully authenticated, but GitHub does not provide shell access.</code><br>说明配置已经成功<br>接下来设置一下你的个人信息（很重要，上传的时候GitHub 会用这些信息来做权限的处理）：<br><code>$ git config --global user.name &quot;dylan1002&quot;//用户名</code><br><code>$ git config --global user.email  &quot;imland@outlook.com&quot;//填写自己的邮箱</code><ol>
-<li>把本地博客同步到GitHub<br>接下来是最后一步咯！将你的个人博客上传到Github上去。。<br><img src="http://ftp499230.host501.zhujiwu.cn/tupian/7.png" alt="7.png"><br>1.首先在GitHub上创建一个仓库repository，注意仓库名称必须为username.github.io，一定要是这个格式哦，username就是你注册的用户名。<br><img src="http://ftp499230.host501.zhujiwu.cn/tupian/8.png" alt="8.png"><br>4.接下来右键之前创建的「Hexo」的文件夹，输入以下命令：<br><code>$ npm install hexo-deployer-git --save</code><br>5.（这里容易出错）配置部署文件，打开「Hexo」文件夹中的_config.yml<br>下拉到最下面，将它们改成：<br><img src="http://ftp499230.host501.zhujiwu.cn/tupian/9.png" alt="9.png"><br><strong>注意repo这里必须是SSH形式的url也就是（git@github.com:username/username.github.io.git）,否者会出现错误</strong><br>保存后就可以部署上去了，在Git命令黑窗口里依次输入<br><code>$ hexo g</code><br><code>$ hexo d</code><br>完成以上步骤，在浏览器中输入username.github.io，如果看到你的个人博客，那恭喜啦啦啦啦，你已经大功告成啦。不过如果没看到，不要灰心，我也是做了将近6个小时才成功的~~~从中间步骤找一下错误出在哪，然后GOOGLE一下，或者可以联系我。。。 </li>
-</ol>
-</li>
-</ol>
-<p>附上我参考的一些文章，希望对大家有帮助：</p>
-
-          
+          <h2 id="前记："><a href="#前记：" class="headerlink" title="前记："></a>前记：</h2><p>  <em>出于兴趣从网上找到一些通过GITHUB搭建个人博客的文章，看完之后觉得挺有意思的，所以决定自己也动手搭建一个属于自己的博客，同时也希望利用其对自己在WEB前端技术学习过程中遇到的问题和难点进行记录，希望它能伴随我的成长，我的电脑是WIN8系统，搭建过程中会有一些网上其他文章所没有提到的地方，我会详细提出。
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/21/如何利用github和hexo搭建搭建个人博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -1185,7 +1258,7 @@ Are you sure you want to continue connecting (yes/no)?</code><br>输入yes、然
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

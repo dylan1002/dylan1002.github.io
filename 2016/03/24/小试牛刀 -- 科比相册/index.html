@@ -79,7 +79,7 @@ if(t">
 addLoadEvent()解决了window.onload只能绑定一个函数的缺点function addLoadEvent(func) {
 var oldonload = window.onload;
 if(t">
-<meta property="og:updated_time" content="2016-03-25T12:27:10.605Z">
+<meta property="og:updated_time" content="2016-04-23T12:10:58.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小试牛刀 -- 科比相册">
 <meta name="twitter:description" content="小试牛刀 – 科比相册
@@ -286,7 +286,7 @@ oldonload();
 func();
    }
   }
-}</code><br>调用方法addLoadEvent(func);这里的func 就是需要调用的函数，<br>function addLoadEvent(func){创建了一个函数名为addLoadEvent,参数为func的函数，这里把我们需要加载的函数作为参数在这个addLoadEvent函数中进行调用。}<br>var oldonload=window.onload 定义一个变量,把window.onload赋给oldonload，如果开始的时候window.onload调用了一个函数A()，那么在这里oldonload就等于A();<br>//typeof 判断一个变量的类型，如果window.onload调用的是一个函数，那么这个if条件语句的值就是true那么就执行window.onload=func;(此时的参数func就是我们需要调用的函数)<br>如果条件语句的结果是false，那么就调用一个匿名的函数window.onload=function(){oldonload();func();}<br>这个匿名的函数 会先执行oldonload()函数,然后执行func（）这个函数。<br>也就是说，会先调用 正在执行的那个函数，然后在调用我们需要调用的函数A().</li>
+}</code><a id="more"></a><br>调用方法addLoadEvent(func);这里的func 就是需要调用的函数，<br>function addLoadEvent(func){创建了一个函数名为addLoadEvent,参数为func的函数，这里把我们需要加载的函数作为参数在这个addLoadEvent函数中进行调用。}<br>var oldonload=window.onload 定义一个变量,把window.onload赋给oldonload，如果开始的时候window.onload调用了一个函数A()，那么在这里oldonload就等于A();<br>//typeof 判断一个变量的类型，如果window.onload调用的是一个函数，那么这个if条件语句的值就是true那么就执行window.onload=func;(此时的参数func就是我们需要调用的函数)<br>如果条件语句的结果是false，那么就调用一个匿名的函数window.onload=function(){oldonload();func();}<br>这个匿名的函数 会先执行oldonload()函数,然后执行func（）这个函数。<br>也就是说，会先调用 正在执行的那个函数，然后在调用我们需要调用的函数A().</li>
 </ol>
 <ol>
 <li>insertAfter()<br><code>function insertAfter(newElement, targetElement){
@@ -396,7 +396,7 @@ parent.insertBefore(newElement, targetElement.nextSibling);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

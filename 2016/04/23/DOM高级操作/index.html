@@ -57,31 +57,31 @@
 
 
 
-<meta name="description" content="3.25 Javascript基本知识（语法）
-标签（空格分隔）： JavaScript
+<meta name="description" content="DOM高级操作标签（空格分隔）： 未分类
 
-Js的语法与C语言等有很多相似之处，我只记录有差异的，或者比较容易错的。
-变量：javascript的变量类型是松散类型的（var）,可以用来保存任意类型的数据。
-数据类型：javascript的数据类型有ECMAScript中有5种简单数据类型（也称为基本数据类型）：Undefined、Null、Boo">
+表格操作获取：tBodies、tHead、tFoot、rows、cells(单元格)
+搜索：1.字符串比较2.忽略大小写3.模糊搜索 search4.多关键字 split
+&amp;lt;script&amp;gt;
+   window.onload=function()   {      oTab=document.getElementById(‘tab1’);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="3.25 Javascript基本知识">
-<meta property="og:url" content="http://yoursite.com/2016/03/25/3.25 Javascript基本知识（语法）/index.html">
+<meta property="og:title" content="DOM高级操作">
+<meta property="og:url" content="http://yoursite.com/2016/04/23/DOM高级操作/index.html">
 <meta property="og:site_name" content="Dylan's home">
-<meta property="og:description" content="3.25 Javascript基本知识（语法）
-标签（空格分隔）： JavaScript
+<meta property="og:description" content="DOM高级操作标签（空格分隔）： 未分类
 
-Js的语法与C语言等有很多相似之处，我只记录有差异的，或者比较容易错的。
-变量：javascript的变量类型是松散类型的（var）,可以用来保存任意类型的数据。
-数据类型：javascript的数据类型有ECMAScript中有5种简单数据类型（也称为基本数据类型）：Undefined、Null、Boo">
-<meta property="og:updated_time" content="2016-03-25T12:26:49.221Z">
+表格操作获取：tBodies、tHead、tFoot、rows、cells(单元格)
+搜索：1.字符串比较2.忽略大小写3.模糊搜索 search4.多关键字 split
+&amp;lt;script&amp;gt;
+   window.onload=function()   {      oTab=document.getElementById(‘tab1’);">
+<meta property="og:updated_time" content="2016-04-23T12:03:04.612Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="3.25 Javascript基本知识">
-<meta name="twitter:description" content="3.25 Javascript基本知识（语法）
-标签（空格分隔）： JavaScript
+<meta name="twitter:title" content="DOM高级操作">
+<meta name="twitter:description" content="DOM高级操作标签（空格分隔）： 未分类
 
-Js的语法与C语言等有很多相似之处，我只记录有差异的，或者比较容易错的。
-变量：javascript的变量类型是松散类型的（var）,可以用来保存任意类型的数据。
-数据类型：javascript的数据类型有ECMAScript中有5种简单数据类型（也称为基本数据类型）：Undefined、Null、Boo">
+表格操作获取：tBodies、tHead、tFoot、rows、cells(单元格)
+搜索：1.字符串比较2.忽略大小写3.模糊搜索 search4.多关键字 split
+&amp;lt;script&amp;gt;
+   window.onload=function()   {      oTab=document.getElementById(‘tab1’);">
 
 
 
@@ -99,7 +99,7 @@ Js的语法与C语言等有很多相似之处，我只记录有差异的，或�
   };
 </script>
 
-  <title> 3.25 Javascript基本知识 | Dylan's home </title>
+  <title> DOM高级操作 | Dylan's home </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -219,7 +219,7 @@ Js的语法与C语言等有很多相似之处，我只记录有差异的，或�
             
             
               
-                3.25 Javascript基本知识
+                DOM高级操作
               
             
           </h1>
@@ -231,8 +231,8 @@ Js的语法与C语言等有很多相似之处，我只记录有差异的，或�
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-25T19:58:51+08:00" content="2016-03-25">
-              2016-03-25
+            <time itemprop="dateCreated" datetime="2016-04-23T20:00:07+08:00" content="2016-04-23">
+              2016-04-23
             </time>
           </span>
 
@@ -258,20 +258,56 @@ Js的语法与C语言等有很多相似之处，我只记录有差异的，或�
       
 
       
-        <p> 3.25 Javascript基本知识（语法）</p>
-<p>标签（空格分隔）： JavaScript</p>
+        <h1 id="DOM高级操作"><a href="#DOM高级操作" class="headerlink" title="DOM高级操作"></a>DOM高级操作</h1><p>标签（空格分隔）： 未分类</p>
 <hr>
-<p>Js的语法与C语言等有很多相似之处，我只记录有差异的，或者比较容易错的。</p>
-<h1 id="变量："><a href="#变量：" class="headerlink" title="变量："></a>变量：</h1><p>javascript的变量类型是松散类型的（var）,可以用来保存任意类型的数据。</p>
-<h1 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h1><p>javascript的数据类型有<br>ECMAScript中有5种简单数据类型（也称为基本数据类型）：Undefined、Null、Boolean、Number和String。还有1种复杂数据类型——Object，其本质是一组 无序 的名值对组成<br>Number类型：<br>ECMAScript能保存的最小数值保存在Number.MIN_VALUE中，最大数值保存在Number.MAX_VALUE中<br>+（-）Infinity表示无穷保存在Number.NEGATIVE_INFINOTY和Number.POSITIVE_INFINITY中。<br>isNaN(a)函数可以确定一个参数a是不是数值，是数值返回false。</p>
-<p>String类型：<br>把一个值转换为字符串的方法1.toString（）；2.</p>
-<h1 id="操作符："><a href="#操作符：" class="headerlink" title="操作符："></a>操作符：</h1><p>+：如果两个操作数都是字符，则将两个字符串连接起来<br>如果只有一个操作数是字符串，则将另外一个操作数转换成字符串再将他们拼接</p>
-<p>全等（===）：它指在两个操作数在未经转换的情况下就相等的情况 Null===Undefined返回False</p>
-<h1 id="语句："><a href="#语句：" class="headerlink" title="语句："></a>语句：</h1><p>for…in 语句用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。<br>label语句可以在代码中添加标签，一般配合break、continue使用。。</p>
-<p>with语句将代码的作用域设置到一个特定的对象中。</p>
-<h1 id="函数："><a href="#函数：" class="headerlink" title="函数："></a>函数：</h1><p>arguements对象：通过访问arguments对象的length属性可以知道有多少个参数传给了函数</p>
-<p>HTML5实践：往Kobe网站中添加音乐<br><code>&lt;audio src=&quot;music/rtn.mp3&quot; loop=&quot;loop&quot; preload=&quot;auto&quot; controls=&quot;controls&quot;&gt;remember the 
-name&lt;/audio&gt;</code></p>
+<h2 id="表格操作"><a href="#表格操作" class="headerlink" title="表格操作"></a>表格操作</h2><p>获取：<br>tBodies、tHead、tFoot、rows、cells(单元格)</p>
+<p>搜索：<br>1.字符串比较<br>2.忽略大小写<br>3.模糊搜索 search<br>4.多关键字 split</p>
+<pre><code>&lt;script&gt;
+</code></pre><p>   window.onload=function()<br>   {<br>      oTab=document.getElementById(‘tab1’);<br>      oBtn=document.getElementById(‘btn1’);<br>      oTet=document.getElementById(‘name’);</p>
+<pre><code>oBtn.onclick=function()
+{ 
+   for(var i=0;i&lt;oTab.tBodies[0].rows.length;i++)
+   {
+     var sTab=oTab.tBodies[0].rows[i].cells[1].innerHTML.toLowerCase();  //大小忽略
+     var sTet=oTet.value.toLowerCase();
+     var arr=sTet.split(&apos; &apos;);   //多个关键字 用空格隔开
+
+     oTab.tBodies[0].rows[i].style.background=&apos;&apos;;  
+     for(j=0;j&lt;arr.length;j++)
+     {
+     if(sTab.search(arr[j])!=-1)    //模糊搜索
+     {
+       oTab.tBodies[0].rows[i].style.background=&apos;yellow&apos;;
+     }    
+     }
+   }  
+}
+</code></pre><p>   }<br></p>
+<h2 id="表格增加"><a href="#表格增加" class="headerlink" title="表格增加"></a>表格增加</h2><pre><code>window.onload=function()
+</code></pre><p>  {<br>     var oTab=document.getElementById(‘tab1’);</p>
+<pre><code>var oBtn=document.getElementById(&apos;btn1&apos;);
+var oName=document.getElementById(&apos;name&apos;);
+var oAge=document.getElementById(&apos;age&apos;);
+
+oBtn.onclick=function()
+{
+    var oTr=document.createElement(&apos;tr&apos;);
+
+    var oTd=document.createElement(&apos;td&apos;);
+    oTd.innerHTML=oTab.tBodies[0].rows.length+1;
+    oTr.appendChild(oTd);
+    var oTd=document.createElement(&apos;td&apos;);
+    oTd.innerHTML=oName.value;
+    oTr.appendChild(oTd);
+    var oTd=document.createElement(&apos;td&apos;);
+    oTd.innerHTML=oAge.value;
+    oTr.appendChild(oTd);
+
+    oTab.tBodies[0].appendChild(oTr);
+
+} 
+</code></pre><p>   }<br><strong>appendChild-先把元素从原来的父级删除，然后添加到新的父级</strong></p>
+<h1 id="表单"><a href="#表单" class="headerlink" title="表单"></a>表单</h1><p>向服务器提交数据，比如用户注册。<br>action 提交到哪里</p>
 
       
     </div>
@@ -289,17 +325,13 @@ name&lt;/audio&gt;</code></p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/25/初识DOM脚本（1）/" rel="next" title="初识DOM脚本（1）">
-                <i class="fa fa-chevron-left"></i> 初识DOM脚本（1）
+              <a href="/2016/04/22/智能时钟v1.0（JS学习笔记）/" rel="next" title="智能时钟v1.0（JS学习笔记）">
+                <i class="fa fa-chevron-left"></i> 智能时钟v1.0（JS学习笔记）
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/25/3.24 HTML5（1）/" rel="prev" title="3.24 HTML5 (1)">
-                3.24 HTML5 (1) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -404,7 +436,7 @@ name&lt;/audio&gt;</code></p>
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#变量："><span class="nav-number">1.</span> <span class="nav-text">变量：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据类型："><span class="nav-number">2.</span> <span class="nav-text">数据类型：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#操作符："><span class="nav-number">3.</span> <span class="nav-text">操作符：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#语句："><span class="nav-number">4.</span> <span class="nav-text">语句：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数："><span class="nav-number">5.</span> <span class="nav-text">函数：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM高级操作"><span class="nav-number">1.</span> <span class="nav-text">DOM高级操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#表格操作"><span class="nav-number">1.1.</span> <span class="nav-text">表格操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格增加"><span class="nav-number">1.2.</span> <span class="nav-text">表格增加</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表单"><span class="nav-number">2.</span> <span class="nav-text">表单</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
