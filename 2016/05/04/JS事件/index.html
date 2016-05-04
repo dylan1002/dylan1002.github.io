@@ -57,43 +57,37 @@
 
 
 
-<meta name="description" content="标签（空格分隔）： JS
+<meta name="description" content="JS事件标签（空格分隔）： JS
 
-1.运动框架  var timer=null;
-   function startmove()
+1.event对象  获取事件的信息获取鼠标点击横纵坐标：
+window.onload=function(){
+  document.onclick=function(ev)
   {
-     var oDiv=document.getElementById(&amp;#39;div1&amp;#39;);
-clearInterval(timer);  //开始时关闭原有定时器
-     timer=setInterval(function(){
-     var">
+  var oEvent=ev||event; //解决兼容性问题
+  alert(oEvent.clientX+&amp;apos;,&amp;apos;+oEvent.clientY);">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS运动  （运动框架）">
-<meta property="og:url" content="http://yoursite.com/2016/04/24/JS运动  （运动框架）/index.html">
+<meta property="og:title" content="JS事件  （运动框架）">
+<meta property="og:url" content="http://yoursite.com/2016/05/04/JS事件/index.html">
 <meta property="og:site_name" content="Dylan's home">
-<meta property="og:description" content="标签（空格分隔）： JS
+<meta property="og:description" content="JS事件标签（空格分隔）： JS
 
-1.运动框架  var timer=null;
-   function startmove()
+1.event对象  获取事件的信息获取鼠标点击横纵坐标：
+window.onload=function(){
+  document.onclick=function(ev)
   {
-     var oDiv=document.getElementById(&amp;#39;div1&amp;#39;);
-clearInterval(timer);  //开始时关闭原有定时器
-     timer=setInterval(function(){
-     var">
-<meta property="og:image" content="http://www.mimacuowu.cn/sucai/4.24/1.png">
-<meta property="og:image" content="http://www.mimacuowu.cn/sucai/4.24/2.png">
-<meta property="og:updated_time" content="2016-04-24T14:54:27.614Z">
+  var oEvent=ev||event; //解决兼容性问题
+  alert(oEvent.clientX+&amp;apos;,&amp;apos;+oEvent.clientY);">
+<meta property="og:updated_time" content="2016-05-04T02:36:25.736Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS运动  （运动框架）">
-<meta name="twitter:description" content="标签（空格分隔）： JS
+<meta name="twitter:title" content="JS事件  （运动框架）">
+<meta name="twitter:description" content="JS事件标签（空格分隔）： JS
 
-1.运动框架  var timer=null;
-   function startmove()
+1.event对象  获取事件的信息获取鼠标点击横纵坐标：
+window.onload=function(){
+  document.onclick=function(ev)
   {
-     var oDiv=document.getElementById(&amp;#39;div1&amp;#39;);
-clearInterval(timer);  //开始时关闭原有定时器
-     timer=setInterval(function(){
-     var">
-<meta name="twitter:image" content="http://www.mimacuowu.cn/sucai/4.24/1.png">
+  var oEvent=ev||event; //解决兼容性问题
+  alert(oEvent.clientX+&amp;apos;,&amp;apos;+oEvent.clientY);">
 
 
 
@@ -111,7 +105,7 @@ clearInterval(timer);  //开始时关闭原有定时器
   };
 </script>
 
-  <title> JS运动  （运动框架） | Dylan's home </title>
+  <title> JS事件  （运动框架） | Dylan's home </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -241,7 +235,7 @@ clearInterval(timer);  //开始时关闭原有定时器
             
             
               
-                JS运动  （运动框架）
+                JS事件  （运动框架）
               
             
           </h1>
@@ -253,8 +247,8 @@ clearInterval(timer);  //开始时关闭原有定时器
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-24T22:39:19+08:00" content="2016-04-24">
-              2016-04-24
+            <time itemprop="dateCreated" datetime="2016-05-04T10:36:49+08:00" content="2016-05-04">
+              2016-05-04
             </time>
           </span>
 
@@ -264,8 +258,8 @@ clearInterval(timer);  //开始时关闭原有定时器
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/04/24/JS运动  （运动框架）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/24/JS运动  （运动框架）/" itemprop="commentsCount"></span>
+                <a href="/2016/05/04/JS事件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/04/JS事件/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -287,39 +281,55 @@ clearInterval(timer);  //开始时关闭原有定时器
       
 
       
-        <p>标签（空格分隔）： JS</p>
+        <h1 id="JS事件"><a href="#JS事件" class="headerlink" title="JS事件"></a>JS事件</h1><p>标签（空格分隔）： JS</p>
 <hr>
-<h2 id="1-运动框架"><a href="#1-运动框架" class="headerlink" title="1.运动框架"></a>1.运动框架</h2><p>  <code>var timer=null;
-   function startmove()
+<h1 id="1-event对象-获取事件的信息"><a href="#1-event对象-获取事件的信息" class="headerlink" title="1.event对象  获取事件的信息"></a>1.event对象  获取事件的信息</h1><p>获取鼠标点击横纵坐标：</p>
+<pre><code>window.onload=function(){
+  document.onclick=function(ev)
   {
-     var oDiv=document.getElementById(&#39;div1&#39;);</code></p>
-<p><code>clearInterval(timer);  //开始时关闭原有定时器
-     timer=setInterval(function(){
-     var speed=1;
-     if(oDiv.offsetLeft&gt;=300)
-     {
-       clearInterval(timer);     
-     }
-     else
-     {
-        oDiv.style.left=oDiv.offsetLeft+speed+&#39;px&#39;; 
-      }
-     },30);</code><br><code>}</code><br><a id="more"></a>注意：1.开始时把原来的定时器关闭<br>2.把运动和停止隔开（if/else）</p>
-<p>使用例子。<br>做一个侧边分享框，鼠标悬停滑出，移走滑入。<br><img src="http://www.mimacuowu.cn/sucai/4.24/1.png" alt="此处输入图片的描述"><br><img src="http://www.mimacuowu.cn/sucai/4.24/2.png" alt="此处输入图片的描述"></p>
-<p>window.onload=function(){<br>      var oDiv=document.getElementById(‘div1’);<br>      oDiv.onmouseover=function()<br>      {<br>          starmove(0,10);<br>      };<br>            oDiv.onmouseout=function()<br>      {<br>          starmove(-150,-10);<br>      };<br>    }<br>var timer=null;<br>function starmove(where,aid){<br>      var oDiv=document.getElementById(‘div1’);</p>
-<pre><code>  clearInterval(timer);
-  timer=setInterval(function(){
-       if(oDiv.offsetLeft==where)
-       {
-          clearInterval(timer);
-       }
-       else
-       {
-        oDiv.style.left=oDiv.offsetLeft+aid+&apos;px&apos;;   
-        }
-      },30);
+  var oEvent=ev||event; //解决兼容性问题
+  alert(oEvent.clientX+&apos;,&apos;+oEvent.clientY);
+  }
 }
-</code></pre><h2 id="2-缓冲运动"><a href="#2-缓冲运动" class="headerlink" title="2.缓冲运动"></a>2.缓冲运动</h2><p>速度=（目标位置-当前位置）/缓冲系数<br>结合Math对象，防止由于小数部分截断导致移动不到目标位置。</p>
+</code></pre><h1 id="2-事件冒泡"><a href="#2-事件冒泡" class="headerlink" title="2.事件冒泡"></a>2.事件冒泡</h1><p>事件会向父级传递，一般是要避免。<br>obj.cancelBubble=true;</p>
+<h1 id="3-键盘事件"><a href="#3-键盘事件" class="headerlink" title="3.键盘事件"></a>3.键盘事件</h1><p>onkeydowm、onkeyup<br>例子 键盘控制DIV移动</p>
+<p><code>document.onkeydown=function(ev)</code><br><code>{</code><br><code>var oEvent=ev||event;</code><br><code>var oDiv=document.getElementById(&#39;div1&#39;);
+  if(oEvent.keyCode==37)</code><br><code>{</code></p>
+<p><code>oDiv.style.left=oDiv.offsetLeft-10+&#39;px&#39;;</code><br>  }     <code>else if(oEvent.keyCode==39)
+  {
+    oDiv.style.left=oDiv.offsetLeft+10+&#39;px&#39;;  
+  }</code><br><code>}</code></p>
+<h1 id="4-默认行为"><a href="#4-默认行为" class="headerlink" title="4.默认行为"></a>4.默认行为</h1><p>浏览器自带的行为，<br>oncontextmenu环境菜单，右键菜单。<br>阻止方法1.ruturn false。<br>2.弹出自定义菜单</p>
+<p><code>document.oncontextmenu=function(ev){</code><br><code>var oEvent=ev||event;</code><br><code>var oDiv=document.getElementById(&quot;div1&quot;);</code></p>
+<p><code>oDiv.style.display=&#39;block&#39;;
+    oDiv.style.left=oEvent.clientX+&#39;px&#39;;  //定位到鼠标点击位置
+    oDiv.style.top=oEvent.clientY+&#39;px&#39;;</code></p>
+<p><code>return false;  //关闭系统默认右键菜单
+    };</code><br><code>document.onclick=function()</code><br>{<br><code>var oDiv=document.getElementById(&quot;div1&quot;);</code></p>
+<p><code>oDiv.style.display=&#39;none&#39;;
+}</code></p>
+<h1 id="5-拖拽"><a href="#5-拖拽" class="headerlink" title="5.拖拽"></a>5.拖拽</h1><p><code>window.onload=function(){
+     var oDiv=document.getElementById(&quot;div1&quot;);</code></p>
+<p><code>var disX=0;
+     var disY=0;
+     oDiv.onmousedown=function(ev)
+     {
+        var oEvent=ev||event;
+        disX=oEvent.clientX-oDiv.offsetLeft;    
+        disY=oEvent.clientY-oDiv.offsetTop; 
+        document.onmousemove=function(ev)
+        {
+         var oEvent=ev||event;</code></p>
+<p><code>oDiv.style.left=oEvent.clientX-disX+&#39;px&#39;;
+         oDiv.style.top=oEvent.clientY-disY+&#39;px&#39;;
+        };
+        document.onmouseup=function(){
+         document.onmousemove=null;
+          document.onmouseup=null;    
+      };
+      return false;  //修复火狐BUG
+     };
+    };</code></p>
 
       
     </div>
@@ -337,17 +347,13 @@ clearInterval(timer);  //开始时关闭原有定时器
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/23/DOM高级操作/" rel="next" title="DOM高级操作">
-                <i class="fa fa-chevron-left"></i> DOM高级操作
+              <a href="/2016/04/24/4.24 将个人网站搬移到腾讯云服务器 /" rel="next" title="4.24 将个人网站搬移到腾讯云服务器">
+                <i class="fa fa-chevron-left"></i> 4.24 将个人网站搬移到腾讯云服务器
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/04/24/4.24 将个人网站搬移到腾讯云服务器 /" rel="prev" title="4.24 将个人网站搬移到腾讯云服务器">
-                4.24 将个人网站搬移到腾讯云服务器 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -373,8 +379,8 @@ clearInterval(timer);  //开始时关闭原有定时器
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/04/24/JS运动  （运动框架）/"
-           data-title="JS运动  （运动框架）" data-url="http://yoursite.com/2016/04/24/JS运动  （运动框架）/">
+      <div class="ds-thread" data-thread-key="2016/05/04/JS事件/"
+           data-title="JS事件  （运动框架）" data-url="http://yoursite.com/2016/05/04/JS事件/">
       </div>
     
   </div>
@@ -456,7 +462,7 @@ clearInterval(timer);  //开始时关闭原有定时器
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-运动框架"><span class="nav-number">1.</span> <span class="nav-text">1.运动框架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-缓冲运动"><span class="nav-number">2.</span> <span class="nav-text">2.缓冲运动</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JS事件"><span class="nav-number">1.</span> <span class="nav-text">JS事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-event对象-获取事件的信息"><span class="nav-number">2.</span> <span class="nav-text">1.event对象  获取事件的信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-事件冒泡"><span class="nav-number">3.</span> <span class="nav-text">2.事件冒泡</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-键盘事件"><span class="nav-number">4.</span> <span class="nav-text">3.键盘事件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-默认行为"><span class="nav-number">5.</span> <span class="nav-text">4.默认行为</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-拖拽"><span class="nav-number">6.</span> <span class="nav-text">5.拖拽</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

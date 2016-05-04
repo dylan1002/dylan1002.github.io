@@ -216,6 +216,150 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/04/JS事件/" itemprop="url">
+                  JS事件  （运动框架）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-04T10:36:49+08:00" content="2016-05-04">
+              2016-05-04
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/04/JS事件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/04/JS事件/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="JS事件"><a href="#JS事件" class="headerlink" title="JS事件"></a>JS事件</h1><p>标签（空格分隔）： JS</p>
+<hr>
+<h1 id="1-event对象-获取事件的信息"><a href="#1-event对象-获取事件的信息" class="headerlink" title="1.event对象  获取事件的信息"></a>1.event对象  获取事件的信息</h1><p>获取鼠标点击横纵坐标：</p>
+<pre><code>window.onload=function(){
+  document.onclick=function(ev)
+  {
+  var oEvent=ev||event; //解决兼容性问题
+  alert(oEvent.clientX+&apos;,&apos;+oEvent.clientY);
+  }
+}
+</code></pre><h1 id="2-事件冒泡"><a href="#2-事件冒泡" class="headerlink" title="2.事件冒泡"></a>2.事件冒泡</h1><p>事件会向父级传递，一般是要避免。<br>obj.cancelBubble=true;</p>
+<h1 id="3-键盘事件"><a href="#3-键盘事件" class="headerlink" title="3.键盘事件"></a>3.键盘事件</h1><p>onkeydowm、onkeyup<br>例子 键盘控制DIV移动</p>
+<p><code>document.onkeydown=function(ev)</code><br><code>{</code><br><code>var oEvent=ev||event;</code><br><code>var oDiv=document.getElementById(&#39;div1&#39;);
+  if(oEvent.keyCode==37)</code><br><code>{</code></p>
+<p><code>oDiv.style.left=oDiv.offsetLeft-10+&#39;px&#39;;</code><br>  }     <code>else if(oEvent.keyCode==39)
+  {
+    oDiv.style.left=oDiv.offsetLeft+10+&#39;px&#39;;  
+  }</code><br><code>}</code></p>
+<h1 id="4-默认行为"><a href="#4-默认行为" class="headerlink" title="4.默认行为"></a>4.默认行为</h1><p>浏览器自带的行为，<br>oncontextmenu环境菜单，右键菜单。<br>阻止方法1.ruturn false。<br>2.弹出自定义菜单</p>
+<p><code>document.oncontextmenu=function(ev){</code><br><code>var oEvent=ev||event;</code><br><code>var oDiv=document.getElementById(&quot;div1&quot;);</code></p>
+<p><code>oDiv.style.display=&#39;block&#39;;
+    oDiv.style.left=oEvent.clientX+&#39;px&#39;;  //定位到鼠标点击位置
+    oDiv.style.top=oEvent.clientY+&#39;px&#39;;</code></p>
+<p><code>return false;  //关闭系统默认右键菜单
+    };</code><br><code>document.onclick=function()</code><br>{<br><code>var oDiv=document.getElementById(&quot;div1&quot;);</code></p>
+<p><code>oDiv.style.display=&#39;none&#39;;
+}</code></p>
+<h1 id="5-拖拽"><a href="#5-拖拽" class="headerlink" title="5.拖拽"></a>5.拖拽</h1><p><code>window.onload=function(){
+     var oDiv=document.getElementById(&quot;div1&quot;);</code></p>
+<p><code>var disX=0;
+     var disY=0;
+     oDiv.onmousedown=function(ev)
+     {
+        var oEvent=ev||event;
+        disX=oEvent.clientX-oDiv.offsetLeft;    
+        disY=oEvent.clientY-oDiv.offsetTop; 
+        document.onmousemove=function(ev)
+        {
+         var oEvent=ev||event;</code></p>
+<p><code>oDiv.style.left=oEvent.clientX-disX+&#39;px&#39;;
+         oDiv.style.top=oEvent.clientY-disY+&#39;px&#39;;
+        };
+        document.onmouseup=function(){
+         document.onmousemove=null;
+          document.onmouseup=null;    
+      };
+      return false;  //修复火狐BUG
+     };
+    };</code></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/24/4.24 将个人网站搬移到腾讯云服务器 /" itemprop="url">
                   4.24 将个人网站搬移到腾讯云服务器
                 </a>
@@ -666,109 +810,6 @@ window.onload = function(){
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/25/3.24 HTML5（1）/" itemprop="url">
-                  3.24 HTML5 (1)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-25T19:59:12+08:00" content="2016-03-25">
-              2016-03-25
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/25/3.24 HTML5（1）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/25/3.24 HTML5（1）/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p> 3.24学习笔记</p>
-<p>标签（空格分隔）： HTML5—</p>
-<h2 id="1-什么是HTML。"><a href="#1-什么是HTML。" class="headerlink" title="1.什么是HTML。"></a>1.什么是HTML。</h2><p> HTML用于详细规定少量构建网页的元素。<br> 这些元素中大多数都用于描述网页内容，如标题、段落、列表等。</p>
-<h2 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h2><p>img元素是显示图片的首选元素<br><img src="" width="" height="" alt="" /><br>p元素标记段落，其中em元素表示强调，a元素可以定义链接。</p>
-<h2 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h2><p>Html的标记主要包括element、attribute、value</p>
-<h2 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h2><p>URL:Uniform Resource Locator<br>基本的URL包含模式、服务器名称、路径和文件名。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/03/25/3.24 HTML5（1）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -814,7 +855,7 @@ window.onload = function(){
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
