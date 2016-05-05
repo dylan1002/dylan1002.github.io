@@ -216,6 +216,223 @@
             
               
                 
+                <a class="post-title-link" href="/2016/03/25/3.25 HTML5（2）/" itemprop="url">
+                  3.25 HTML5 (2)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-25T19:58:16+08:00" content="2016-03-25">
+              2016-03-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/25/3.25 HTML5（2）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/25/3.25 HTML5（2）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p> 3.25 HTML5（2）</p>
+<p>标签（空格分隔）： HTML5</p>
+<hr>
+<h1 id="基本HTML结构"><a href="#基本HTML结构" class="headerlink" title="基本HTML结构"></a>基本HTML结构</h1><p>1.创建页眉<code>&lt;header&gt; &lt;/header&gt;</code><br>2.标记导航 <code>&lt;nav&gt;&lt;/nav&gt;</code><br>3.创建文章<code>〈article〉&lt;/article&gt;</code><br><strong>4.artcle和section的区别。<br>article元素可以看成是一种特殊类型的section元素，它比section元素更强调独立性。即section元素强调分段或分块，而article强调独立性。具体来说，如果一块内容相对来说比较独立的、完整的时候，应该使用article元素，但是如果你想将一块内容分成几段的时候，应该使用section元素。另外，在HTML5中，div元素变成了一种容器，当使用CSS样式的时候，可以对这个容器进行一个总体的CSS样式的套用。</strong><br>4.标记侧栏。aside。<br>尽管他是对侧栏内容的标记，但是它本身不影响页面布局。<br>5.创建页脚footer。<br><strong>通用容器<code>&lt;div&gt;</code> 有了通用容器，我们就可以为其添加CSS或JavaScript效果了。</strong></p>
+<h1 id="为元素指定类别或ID名称。"><a href="#为元素指定类别或ID名称。" class="headerlink" title="为元素指定类别或ID名称。"></a>为元素指定类别或ID名称。</h1><p>1.唯一标识符的方法 id=“name”<br>2.指定类别的方法class = “name”<br><em>id属性会自动将该元素转化成锚，可以创建指到这里的链接</em></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/24/小试牛刀 -- 科比相册/" itemprop="url">
+                  小试牛刀 -- 科比相册
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-24T12:21:37+08:00" content="2016-03-24">
+              2016-03-24
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/24/小试牛刀 -- 科比相册/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/24/小试牛刀 -- 科比相册/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p> 小试牛刀 – 科比相册</p>
+<p>标签（空格分隔）： DOM</p>
+<hr>
+<p>学了DOM怎能不为科比建相册，乱搞= = </p>
+<p>#地址：<a href="http://kobe.mimacuowu.cn">http://kobe.mimacuowu.cn</a> JS中的函数（DOM脚本）</p>
+<ol>
+<li>addLoadEvent()<br><strong>解决了window.onload只能绑定一个函数的缺点</strong><br><code>function addLoadEvent(func) {
+var oldonload = window.onload;
+if(typeof window.onload != &#39;function&#39;)
+{
+window.onload = func;
+}else
+ {
+window.onload = function()
+  {
+oldonload();
+func();
+   }
+  }
+}</code>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/03/24/小试牛刀 -- 科比相册/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/03/24/3.22笔记/" itemprop="url">
                   3.22笔记
                 </a>
@@ -538,7 +755,7 @@ alert (description.nodeValue);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">15</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
