@@ -216,6 +216,115 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/21/HTML 纸牌记忆配对游戏(计时器)/" itemprop="url">
+                  纸牌记忆配对游戏(计时器)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-21T18:43:56+08:00" content="2016-05-21">
+              2016-05-21
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/21/HTML 纸牌记忆配对游戏(计时器)/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/21/HTML 纸牌记忆配对游戏(计时器)/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="HTML-纸牌记忆配对游戏-计时器"><a href="#HTML-纸牌记忆配对游戏-计时器" class="headerlink" title="HTML 纸牌记忆配对游戏(计时器)"></a>HTML 纸牌记忆配对游戏(计时器)</h1><p>标签（空格分隔）： 未分类</p>
+<hr>
+<p>纸牌游戏网址：www.mimacuowu.com/peidui<br>写完纸牌记忆游戏的基本功能之后，决定添加一个游戏计时器增加游戏乐趣。<br>主要代码：<br><code>var time=0  
+var t  
+function timedCount()  
+{  
+document.getElementById(&#39;timecount&#39;).value=time  
+time=time+1  
+t=setTimeout(&quot;timedCount()&quot;,1000)  
+}  
+function stopCount()  
+{  
+clearTimeout(t)  
+}</code></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/05/Ajax/" itemprop="url">
                   初识Ajax
                 </a>
@@ -639,126 +748,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/04/24/JS运动  （运动框架）/" itemprop="url">
-                  JS运动  （运动框架）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-04-24T22:39:19+08:00" content="2016-04-24">
-              2016-04-24
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/04/24/JS运动  （运动框架）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/24/JS运动  （运动框架）/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>标签（空格分隔）： JS</p>
-<hr>
-<h2 id="1-运动框架"><a href="#1-运动框架" class="headerlink" title="1.运动框架"></a>1.运动框架</h2><p>  <code>var timer=null;
-   function startmove()
-  {
-     var oDiv=document.getElementById(&#39;div1&#39;);</code></p>
-<p><code>clearInterval(timer);  //开始时关闭原有定时器
-     timer=setInterval(function(){
-     var speed=1;
-     if(oDiv.offsetLeft&gt;=300)
-     {
-       clearInterval(timer);     
-     }
-     else
-     {
-        oDiv.style.left=oDiv.offsetLeft+speed+&#39;px&#39;; 
-      }
-     },30);</code><br><code>}</code><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/04/24/JS运动  （运动框架）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -799,7 +793,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

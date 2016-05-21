@@ -216,6 +216,121 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/24/JS运动  （运动框架）/" itemprop="url">
+                  JS运动  （运动框架）
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-24T22:39:19+08:00" content="2016-04-24">
+              2016-04-24
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/04/24/JS运动  （运动框架）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/04/24/JS运动  （运动框架）/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>标签（空格分隔）： JS</p>
+<hr>
+<h2 id="1-运动框架"><a href="#1-运动框架" class="headerlink" title="1.运动框架"></a>1.运动框架</h2><p>  <code>var timer=null;
+   function startmove()
+  {
+     var oDiv=document.getElementById(&#39;div1&#39;);</code></p>
+<p><code>clearInterval(timer);  //开始时关闭原有定时器
+     timer=setInterval(function(){
+     var speed=1;
+     if(oDiv.offsetLeft&gt;=300)
+     {
+       clearInterval(timer);     
+     }
+     else
+     {
+        oDiv.style.left=oDiv.offsetLeft+speed+&#39;px&#39;; 
+      }
+     },30);</code><br><code>}</code><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/04/24/JS运动  （运动框架）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/23/DOM高级操作/" itemprop="url">
                   DOM高级操作
                 </a>
@@ -663,130 +778,11 @@ name&lt;/audio&gt;</code></p>
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/25/初识DOM脚本（1）/" itemprop="url">
-                  初识DOM脚本（1）
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-25T19:58:35+08:00" content="2016-03-25">
-              2016-03-25
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/03/25/初识DOM脚本（1）/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/25/初识DOM脚本（1）/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p> 初识DOM脚本（1）</p>
-<p>标签（空格分隔）： DOM</p>
-<hr>
-<h3 id="1-nodeValue-属性设置或返回指定节点的节点值。"><a href="#1-nodeValue-属性设置或返回指定节点的节点值。" class="headerlink" title="1.nodeValue 属性设置或返回指定节点的节点值。"></a>1.nodeValue 属性设置或返回指定节点的节点值。</h3><p>例子：<br>function myFunction()<br>{<br>var c=document.getElementsByTagName(“BUTTON”)[0];<br>var x=document.getElementById(“demo”);<br>x.innerHTML=c.firstChild.nodeValue;<br>}<br><strong>获得第一个 button 元素的节点值</strong></p>
-<h3 id="2-动态创建HTML"><a href="#2-动态创建HTML" class="headerlink" title="2.动态创建HTML"></a>2.动态创建HTML</h3><p>1.document.write()：<br>write() 方法可向文档写入 HTML 表达式或 JavaScript 代码。<br>可列出多个参数(exp1,exp2,exp3,…) ，它们将按顺序被追加到文档中。<br><strong>为了避免使用〈script〉标签，所以避免使用document.write方法</strong><br>2.innerHTML ：<br><code>&lt;div id=&quot;testdiv&quot;&gt;
-&lt;/div&gt;</code><br><code>window.onload = function (){
-   var testdiv = document.getElementById(&quot;testdiv&quot;);
-   testdiv.innerHTML=&quot;&lt;p&gt;I inserted &lt;em&gt;this&lt;/em&gt;content.&lt;/p&gt;&quot;;
-}</code><br>3.DOM提供的方法：<br>creatElement()+appendChild()+createTextNode（）<br>例子：<br><code>window.onload = function(){
-  var para = document.createElement(&quot;p&quot;)
-  var testdiv = document.getElementById(&quot;testdiv&quot;);
-  testdiv.appendChild(para);
-  var txt= document.creatTextNode(&quot;Hello World&quot;);
-  para.appendChild(txt);
-}</code></p>
-<h3 id="3-根据insertBefore（）编写insertAfter（）"><a href="#3-根据insertBefore（）编写insertAfter（）" class="headerlink" title="3.根据insertBefore（）编写insertAfter（）"></a>3.根据insertBefore（）编写insertAfter（）</h3><p>insertBefore（）调用<br>parentElement.insertBefore(newElement,targetElement)</p>
-<p><code>function insertAfter (newElement,targetElement){
- var parent = targetElement.parentNode;
- if(parent.lastChild == targetElemt){
-   parent.appendChild(newElement);
- }else{
-  parent.insertBefore(newElement,targetElement.nextSibling);
- }
-}</code></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -827,7 +823,7 @@ name&lt;/audio&gt;</code></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">15</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
